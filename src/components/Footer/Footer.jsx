@@ -1,65 +1,68 @@
-import React from 'react';
-import logo from '../../assets/logos/costa_legal_wt.png';
-import { PHONE_NUMBER, EMAIL_ADDRESS, OFFICE_LOCATION, OFFICE_BUILDING, PERSONAL_PHONE_NUMBER } from '../../utils/constants';
-import { telLink } from '../../utils/commonFuncs';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { Grid, IconButton, Typography, Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import './Footer.css';
+import logo from '../../assets/logos/costa_legal_wt.png';
+import Icon from '../Icon/Icon';
+import { SERVICES } from '../../routes';
+import { EMAIL_ADDRESS, PHONE_NUMBER, PERSONAL_PHONE_NUMBER, MAPS_LINK, SOCIAL_LINKS } from '../../utils/constants';
+import { whatsappLink } from '../../utils/commonFuncs';
 
 const Footer = () => {
-  const { t } = useTranslation("global");
+  const { t } = useTranslation('global');
+  const year = new Date().getFullYear();
 
   return (
-    <div className='contact'>
-      <Grid container spacing={2} direction={{xs: 'column', sm: 'row'}} className='contact-grid' sx={{ marginLeft: { xs: 0 }}}>
-        {/* Contact Grid */}
-        <Grid size={{ xs: 12, sm: 8 }} className='contact-form'>
-          <div className='footer-left'>
-            <img src={logo} alt="logo" className='contact-logo' />
-            <Link className='footer-location' underline='none' sx={{ cursor: 'pointer' }} onClick={() => window.open("https://maps.app.goo.gl/WyTyBSpMBhj5M1Sb8", "_blank")} >
-              <LocationOnIcon sx={{ fontSize: '1.9rem', color: '#FFFFFF'}} />
-              <Typography variant='body1' sx={{ color: '#FFFFFF'}}>{OFFICE_LOCATION}. {OFFICE_BUILDING}, {t("home.location.floor")}</Typography>
-            </Link>
+    <footer className="site-footer">
+      <div className="container site-footer__grid">
+        <div className="site-footer__brand">
+          <img src={logo} alt="Costa Legal" width="168" height="70" loading="lazy" />
+          <p>{t('footer.tagline')}</p>
+        </div>
+
+        <div>
+          <h2 className="site-footer__heading">{t('footer.services')}</h2>
+          <ul className="site-footer__list">
+            {SERVICES.map((page) => (
+              <li key={page.key}><Link to={page.path}>{t(`nav.${page.key}`)}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="site-footer__heading">{t('footer.contact')}</h2>
+          <ul className="site-footer__list site-footer__list--icons">
+            {[PHONE_NUMBER, PERSONAL_PHONE_NUMBER].map((phone) => (
+              <li key={phone}>
+                <a href={whatsappLink(phone)} target="_blank" rel="noopener noreferrer">
+                  <Icon name="whatsapp" size={18} /> {phone}
+                </a>
+              </li>
+            ))}
+            <li><a href={`mailto:${EMAIL_ADDRESS}`}><Icon name="mail" size={18} /> {EMAIL_ADDRESS}</a></li>
+            <li>
+              <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer">
+                <Icon name="place" size={18} /> <span>{t('contact.details.address')}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="site-footer__heading">{t('footer.follow')}</h2>
+          <div className="site-footer__social">
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Icon name="instagram" size={22} />
+            </a>
+            <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Icon name="facebook" size={22} />
+            </a>
           </div>
-        </Grid>
-
-        {/* Info Grid */}
-        <Grid size={{ xs: 12, sm: 4 }}>
-          <div className='contact-info'>
-            <Typography variant='h3' sx={{ color: '#99A7CA', fontSize: '34px'}}>{t("contact.phone")}</Typography>
-            <Link underline='none' sx={{ color: '#FFFFFF'}} href={telLink(PHONE_NUMBER)}>
-              <Typography variant='body1'>{PHONE_NUMBER}</Typography>
-            </Link>
-            <Link underline='none' sx={{ color: '#FFFFFF'}} href={telLink(PERSONAL_PHONE_NUMBER)}>
-              <Typography variant='body1' sx={{ paddingBottom: 7}}>{PERSONAL_PHONE_NUMBER}</Typography>
-            </Link>
-
-            <Typography variant='h3' sx={{ color: '#99A7CA', fontSize: '34px'}}>{t("contact.email")}</Typography>
-            <Link underline='none' sx={{ color: '#FFFFFF'}} href={`mailto:${EMAIL_ADDRESS}`}>
-              <Typography variant='body1' sx={{ paddingBottom: 7}}>{EMAIL_ADDRESS}</Typography>
-            </Link>
-
-            <Typography variant='h3' sx={{ color: '#99A7CA', fontSize: '34px'}}>{t("contact.social")}</Typography>
-            <Grid container spacing={{ sm: 3, lg: 0.5 }}>
-              <Grid size={{ xs: 6, sm: 1 }} sx={{ textAlign: { xs: 'end'}}}>
-                <IconButton sx={{ padding: 0 }} size='small' color='inherit' onClick={() => window.open("https://www.instagram.com/costalegalcr/", '_blank')}>
-                  <InstagramIcon sx={{ fontSize: '1.9rem'}} />
-                </IconButton>
-              </Grid>
-              <Grid size={{ xs: 6, sm: 1 }} sx={{ textAlign: { xs: 'start'}}}>
-                <IconButton sx={{ padding: 0 }} size='small' color='inherit' onClick={() => window.open("https://www.facebook.com/costalegalcr/", '_blank')}>
-                  <FacebookIcon sx={{ fontSize: '1.9rem'}} />
-                </IconButton>
-              </Grid>
-            </Grid>
-          </div>
-        </Grid>
-      </Grid>
-    </div>
-  )
-}
+        </div>
+      </div>
+      <div className="container site-footer__bottom">
+        <p>© {year} Costa Legal. {t('footer.rights')}</p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

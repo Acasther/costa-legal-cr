@@ -1,166 +1,507 @@
 {
-  "common": {
-    "getInTouch": "Contáctenos",
-    "message": "Mensaje",
-    "name": "Nombre",
-    "readMore": "Leer más",
-    "learnMore": "Conocer más",
-    "services": "Nuestros servicios",
-    "submit": "Enviar",
-    "readyMove": "¿Listo para dar el paso?",
-    "moreInfo": "¿Necesita más información?"
-  },
-  "contact": {
-    "email": "Correo electrónico",
-    "phone": "Teléfono",
-    "social": "Redes sociales",
-    "title": "Contacto",
-    "contactNow": "Contáctenos ya",
-    "hasSentMessage": "te ha enviado un mensaje a través de Costa Legal",
-    "template": {
-      "sentMessage": "te ha enviado un mensaje"
-    }
-  },
-  "home": {
-    "aboutUs": {
-      "description": "En Costa Legal brindaremos servicios legales personalizados, con un equipo de abogados bilingües dedicados a guiar a los clientes a través de las complejidades del derecho costarricense, incluyendo inmigración, bienes raíces, negocios y asuntos comerciales.",
-      "title": "Acerca de nuestro bufete"
+  "meta": {
+    "home": {
+      "title": "Costa Legal | Abogados de migración, bienes raíces y negocios en Costa Rica",
+      "description": "Bufete bilingüe en Escazú, Costa Rica: residencia y migración, bienes raíces, negocios y seguros del INS. Agende una consulta gratuita."
     },
     "immigration": {
-      "description": "Costa Legal se especializa en derecho de inmigración y ofrece servicios personalizados para individuos y empresas. Ayudamos a los clientes con solicitudes de visa, permisos de trabajo, solicitudes de residencia y ciudadanía.",
-      "title": "Inmigración"
-    },
-    "insurance": {
-      "description": "Ofrecemos servicios de seguros en Costa Rica, brindando cobertura integral para protegerlo a usted y sus activos. Nuestro equipo de profesionales de seguros experimentados trabaja con los principales proveedores de seguros para ofrecer una variedad de opciones de seguros, incluyendo salud, propiedad, responsabilidad, y más.",
-      "title": "Seguros"
-    },
-    "location": {
-      "title": "Donde estamos",
-      "floor": "primer piso"
+      "title": "Abogados de residencia y migración en Costa Rica | Costa Legal",
+      "description": "Residencia como pensionado, rentista, inversionista o por vínculo familiar. Requisitos, plazos y acompañamiento hasta obtener su DIMEX."
     },
     "realEstate": {
-      "description": "Nuestro equipo legal brinda servicios legales integrales en bienes raíces a clientes que desean comprar, vender o invertir en propiedades en Costa Rica. Ofrecemos orientación legal personalizada y apoyo para garantizar una transacción fluida y exitosa.",
-      "title": "Bienes raíces"
+      "title": "Abogados de bienes raíces en Costa Rica | Costa Legal",
+      "description": "Compre, venda, alquile o desarrolle propiedades con seguridad: estudios registrales, escrow, cierres y alquileres con un equipo bilingüe."
     },
-    "welcome": "Tu guía legal hacia un futuro más brillante en Costa Rica y más allá",
-    "welcomeBtn": "Reserva una consulta"
-  },
-  "immigration": {
-    "titleCR": "Inmigración en Costa Rica",
-    "summary": "Ofrecemos los siguientes servicios para ayudarte en el proceso de obtener residencia en Costa Rica. Las leyes de inmigración en Costa Rica ofrecen numerosas opciones para que las personas se muden al país. Hay oportunidades para jubilados, personas con ingresos fijos, inversionistas, cónyuges o padres de un costarricense, personas autónomas o emprendedores y empleados de una empresa.",
-    "residencyServices": "Servicios de Residencia",
-    "residencyRetired": {
-      "title": "Personas Jubiladas (Pensionados)",
-      "description": "Esta opción está disponible para personas que están actualmente jubiladas y reciben ingresos de jubilación de al menos $1,000 al mes. Los ingresos pueden provenir de una pensión del Sistema de Seguridad Social o del Sistema de Pensiones en su país de origen. Esta residencia también está disponible para personas que reciben ingresos por discapacidad. Luego, es posible patrocinar a cónyuges e hijos."
+    "business": {
+      "title": "Abogados corporativos y de negocios en Costa Rica | Costa Legal",
+      "description": "Constitución de sociedades, cumplimiento corporativo y tributario, inscripción patronal ante la CCSS y planificación patrimonial."
     },
-    "residencyFixed": {
-      "title": "Personas con Ingresos Fijos (Rentistas)",
-      "description": "En esta opción, se requiere demostrar que recibes al menos $2,500 al mes. Hay varias formas de demostrar este ingreso. Una opción es depositar una cantidad igual a dos años de ingresos, que son $60,000 USD, en un banco en el extranjero o en Costa Rica. Otra opción es certificar tus ingresos desde el extranjero o abrir un fideicomiso."
+    "insurance": {
+      "title": "Seguros del INS en Costa Rica: auto, hogar y salud | Costa Legal",
+      "description": "Seguros de auto, hogar, salud y vida del Instituto Nacional de Seguros (INS), y asesoría legal cuando un reclamo es rechazado."
     },
-    "residencyInvestors": {
-      "title": "Inversionistas",
-      "description": "Recientemente, el gobierno costarricense redujo la cantidad mínima de inversión a $150,000 USD en Costa Rica. La inversión puede ser en un negocio o en activos como bienes raíces."
+    "contact": {
+      "title": "Contacte a Costa Legal | Consulta gratuita en Escazú",
+      "description": "Escríbanos por el formulario, WhatsApp o correo, o visítenos en Edificio Monterrico, Escazú. Su primera consulta es gratuita."
     },
-    "residencyMarriage": {
-      "title": "Bajo Matrimonio",
-      "description": "La categoría de matrimonio está disponible para extranjeros que se casan con un costarricense. Después de dos años de matrimonio y residencia en Costa Rica, es posible obtener la ciudadanía."
-    },
-    "residencyParents": {
-      "title": "Padres",
-      "description": "Los extranjeros que tienen hijos nacidos en Costa Rica son elegibles para la residencia."
-    },
-    "residencyEntrepeneurs": {
-      "title": "Personas Autónomas o Emprendedoras",
-      "description": "Esta categoría está disponible para personas que desean trabajar por cuenta propia o abrir su propio negocio en Costa Rica. No se requiere una cantidad mínima de dinero, solo tener un negocio. Hay un par de opciones para personas autónomas. Por un lado, las personas que tienen una habilidad o área de especialización particular califican para una Residencia para Trabajadores Calificados, y por lo tanto, es necesario demostrar cuál es tu habilidad. También hay una residencia para personas que simplemente tienen un negocio físico, como un hotel o restaurante."
-    },
-    "residencyForeign": {
-      "title": "Trabajadores Extranjeros",
-      "description": "Existen opciones para que las empresas contraten trabajadores extranjeros. Ya sean ejecutivos, gerentes, técnicos o consultores, las regulaciones costarricenses permiten múltiples opciones para contratar trabajadores extranjeros."
-    },
-    "requirements": {
-      "title": "Requisitos Generales de Inmigración",
-      "description": "La siguiente lista describe los requisitos generales para cualquier solicitud de residencia.",
-      "list": {
-        "verification": "<strong>Verificación del requisito principal</strong>. Dependiendo de la categoría para la cual presentará su solicitud, se requerirá documentación para confirmar la elegibilidad bajo esa categoría. Por ejemplo, las personas que soliciten bajo la categoría de jubilación deben presentar una carta que confirme los ingresos por jubilación; las personas que soliciten bajo la categoría de inversión deben proporcionar certificaciones de la inversión, ya sea en bienes raíces o en un negocio; las personas que soliciten la residencia por matrimonio deben presentar un certificado de matrimonio de Costa Rica.",
-        "check": "<strong>Verificación de antecedentes</strong>. Este documento debe ser emitido por una autoridad nacional. En el caso de los ciudadanos estadounidenses, por ejemplo, debe ser del FBI. En el caso de los ciudadanos canadienses, debe ser emitido por la Real Policía Montada de Canadá. En el caso de los ciudadanos del Reino Unido, debe ser emitido por la Asociación de Jefes de Policía.",
-        "birth": "<strong>Certificado de nacimiento</strong>. Se requiere una copia reciente de su certificado de nacimiento, no mayor de seis meses.",
-        "application": "<strong>Formulario de solicitud</strong>. Completamos esto para nuestros clientes.",
-        "cover": "<strong>Carta de presentación</strong>. También completamos esto para nuestros clientes. Contiene cierta información sobre usted.",
-        "fingerprints": "<strong>Huellas digitales</strong>. Se obtienen en un departamento de policía. Coordinaremos con usted para recibirlas, brindando asistencia en San José llevándolo desde nuestra oficina hasta el lugar correspondiente y manejando los formularios correspondientes.",
-        "certify": "<strong>Copia certificada del pasaporte</strong>. Certificamos su copia de pasaporte.",
-        "registration": "<strong>Registro consular</strong>. Se requiere el registro en el consulado de su país, también completamos esto para nuestros clientes.",
-        "passport": "<strong>Fotografías tamaño pasaporte</strong>.",
-        "fees": "<strong>Tarifas gubernamentales</strong>. Inicialmente, se requiere pagar $251 USD en tarifas de solicitud. Al final del proceso, se requiere pagar $433 USD adicionales en tarifas gubernamentales."
-      },
-      "notes": {
-        "title": "Notas Importantes Sobre Los Documentos",
-        "list": {
-          "translated": "Todos los documentos en un idioma extranjero deben traducirse al español. Los costos de las traducciones variarán según el idioma original.",
-          "apostille": "Todos los documentos del extranjero deben ser autenticados para su uso en Costa Rica. Los documentos de ciertos países requieren una apostilla.",
-          "legislation": "Los documentos de otros países requieren una legalización.",
-          "certificate": "Los certificados de nacimiento y las verificaciones de antecedentes (y cualquier otro documento del extranjero) deben emitirse dentro de los seis meses previos a la presentación de la solicitud. Por lo tanto, el certificado de nacimiento original emitido cuando nació no será válido para fines de inmigración en Costa Rica.",
-          "check": "Las verificaciones de antecedentes deben provenir de los países donde vivió legalmente en los últimos tres años. Vivir legalmente excluye a las personas que vivían como turistas; solo se aplica a personas que residían legalmente en un país extranjero."
-        }
-      }
+    "notFound": {
+      "title": "Página no encontrada | Costa Legal",
+      "description": "La página que busca no existe."
     }
   },
-  "links": {
-    "contactUs": "Contáctenos",
+  "nav": {
     "home": "Inicio",
-    "immigration": "Inmigración",
+    "services": "Servicios",
+    "immigration": "Migración",
+    "realEstate": "Bienes raíces",
+    "business": "Negocios",
     "insurance": "Seguros",
-    "realEstate": "Bienes raíces"
+    "contact": "Contacto",
+    "cta": "Consulta gratuita",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "switchLanguage": "Switch to English",
+    "skip": "Saltar al contenido",
+    "logo": "Costa Legal, inicio"
+  },
+  "common": {
+    "bookConsultation": "Agende una consulta gratuita",
+    "whatsapp": "Escríbanos por WhatsApp",
+    "whatsappMessage": "Hola, me gustaría agendar una consulta gratuita.",
+    "learnMore": "Ver más",
+    "name": "Nombre",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "weHandleIt": "Lo hacemos por usted"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Bufete bilingüe en Escazú, Costa Rica",
+      "title": "Su aliado legal para vivir en Costa Rica",
+      "subtitle": "Residencia, bienes raíces, negocios y seguros, con un equipo bilingüe que le explica cada paso con claridad.",
+      "imageAlt": "Atardecer en la costa del Pacífico de Costa Rica"
+    },
+    "trust": [
+      {
+        "icon": "language",
+        "title": "Equipo bilingüe",
+        "text": "Le atendemos en español o en inglés."
+      },
+      {
+        "icon": "insurance",
+        "title": "Aliados del INS",
+        "text": "Socios del Instituto Nacional de Seguros de Costa Rica."
+      },
+      {
+        "icon": "place",
+        "title": "Oficina en Escazú",
+        "text": "Visítenos en Edificio Monterrico, Trejos Montealegre."
+      },
+      {
+        "icon": "calendar",
+        "title": "Primera consulta gratuita",
+        "text": "Cuéntenos su situación y le explicamos sus opciones."
+      }
+    ],
+    "services": {
+      "eyebrow": "Lo que hacemos",
+      "title": "Servicios legales para extranjeros, inversionistas y familias",
+      "intro": "Un solo bufete para el lado legal de su vida en Costa Rica: su residencia, su hogar, su empresa y sus seguros.",
+      "items": {
+        "immigration": "Residencia para pensionados, rentistas, inversionistas, familias y trabajadores, desde la recopilación de documentos hasta la entrega de su DIMEX.",
+        "realEstate": "Compra, venta, alquiler o desarrollo de propiedades, con estudios registrales, escrow y cierre bien hechos.",
+        "business": "Constitución de sociedades, cumplimiento corporativo y tributario, inscripción patronal ante la CCSS y planificación patrimonial.",
+        "insurance": "Seguros de auto, hogar, salud y vida del INS, y asesoría legal cuando un reclamo es rechazado o disputado."
+      }
+    },
+    "about": {
+      "eyebrow": "Sobre Costa Legal",
+      "title": "Asesoría legal clara, en su idioma",
+      "paragraphs": [
+        "Costa Legal es un bufete bilingüe en Escazú que ayuda a extranjeros y costarricenses con el derecho costarricense: solicitudes de residencia, compra de propiedades, sociedades y seguros.",
+        "Los trámites en Costa Rica son conocidos por su complejidad. Nosotros preparamos la documentación, gestionamos ante las instituciones y le mantenemos informado en cada etapa, para que usted se enfoque en sus planes."
+      ],
+      "points": [
+        "Atención personalizada de principio a fin",
+        "Formularios y gestiones preparados por nosotros",
+        "Una red de agentes inmobiliarios, desarrolladores y bancos de confianza"
+      ],
+      "panel": {
+        "languages": "Español & English",
+        "office": "Escazú, San José",
+        "practice": "Migración · Bienes raíces · Negocios · Seguros"
+      }
+    },
+    "process": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "Tres pasos, sin sorpresas",
+      "steps": [
+        {
+          "title": "Consulta gratuita",
+          "text": "Cuéntenos su situación por el formulario, WhatsApp o en persona. Le explicamos sus opciones y lo que necesitará."
+        },
+        {
+          "title": "Preparamos todo",
+          "text": "Reunimos y revisamos sus documentos, completamos los formularios y los presentamos ante las instituciones correspondientes."
+        },
+        {
+          "title": "Le acompañamos hasta el final",
+          "text": "Damos seguimiento ante las autoridades y le mantenemos al tanto hasta que el trámite esté completo."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Preguntas",
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Cuánto tarda el proceso de residencia?",
+          "a": "Tiene tres etapas: unas 8 semanas para reunir documentos, normalmente de 9 a 12 meses para la revisión de la Dirección General de Migración y Extranjería (DGME), y unas 4 semanas para la inscripción en la CCSS y la entrega del DIMEX. Los plazos dependen de la carga de trabajo del gobierno."
+        },
+        {
+          "q": "¿Puedo permanecer en Costa Rica mientras mi solicitud está en trámite?",
+          "a": "Sí. Una vez presentada la solicitud, la DGME emite un comprobante que, junto con su pasaporte, funciona como identificación válida, y la ley le permite permanecer en el país mientras la solicitud está en trámite."
+        },
+        {
+          "q": "¿Mis documentos deben traducirse?",
+          "a": "Sí. Los documentos en otro idioma deben traducirse al español, y los documentos extranjeros deben apostillarse o legalizarse. Los certificados de nacimiento y de antecedentes deben emitirse dentro de los seis meses previos a la presentación."
+        },
+        {
+          "q": "¿Podemos empezar mientras sigo en el extranjero?",
+          "a": "Sí. La primera etapa es reunir los documentos que traerá a Costa Rica, y le guiamos en ese proceso desde donde esté."
+        },
+        {
+          "q": "¿Atienden en inglés?",
+          "a": "Sí. Nuestro equipo trabaja en español e inglés, y le explicamos cada documento y cada paso en el idioma que prefiera."
+        }
+      ]
+    }
+  },
+  "cta": {
+    "title": "¿Listo para dar el paso?",
+    "text": "Agende una consulta gratuita y le explicamos sus opciones."
+  },
+  "immigration": {
+    "hero": {
+      "eyebrow": "Migración y residencia",
+      "title": "Haga de Costa Rica su hogar, de forma legal",
+      "intro": "Costa Rica ofrece opciones de residencia para pensionados, personas con ingresos estables, inversionistas, familias y trabajadores. Le ayudamos a elegir la categoría adecuada y nos encargamos del trámite de principio a fin.",
+      "imageAlt": "Pasaporte y documentos de viaje sobre un escritorio"
+    },
+    "categories": {
+      "eyebrow": "Categorías de residencia",
+      "title": "Encuentre el camino adecuado",
+      "intro": "Cada categoría tiene sus propios requisitos. En su consulta gratuita confirmamos cuál le corresponde.",
+      "items": [
+        {
+          "icon": "elderly",
+          "title": "Pensionados",
+          "label": "Pensionado",
+          "figure": "Pensión de al menos $1,000 al mes",
+          "text": "Para personas que reciben una pensión del sistema de seguridad social o de pensiones de su país de origen. Los ingresos por discapacidad también califican, y puede incluir a su cónyuge e hijos."
+        },
+        {
+          "icon": "paid",
+          "title": "Ingresos fijos",
+          "label": "Rentista",
+          "figure": "Al menos $2,500 al mes",
+          "text": "Demuestre un ingreso estable, ya sea depositando $60,000 (dos años de ingresos) en un banco en Costa Rica o en el extranjero, certificando sus ingresos del exterior o mediante un fideicomiso."
+        },
+        {
+          "icon": "trending",
+          "title": "Inversionistas",
+          "label": "Inversionista",
+          "figure": "Inversión de al menos $150,000",
+          "text": "Invierta en un negocio costarricense o en activos como bienes raíces."
+        },
+        {
+          "icon": "family",
+          "title": "Matrimonio con costarricense",
+          "label": "",
+          "figure": "Ciudadanía después de 2 años",
+          "text": "Para personas extranjeras casadas con costarricense. Después de dos años de matrimonio y residencia en el país, puede solicitar la ciudadanía."
+        },
+        {
+          "icon": "child",
+          "title": "Padres de costarricense",
+          "label": "",
+          "figure": "",
+          "text": "Las personas extranjeras con hijos nacidos en Costa Rica pueden optar por la residencia."
+        },
+        {
+          "icon": "storefront",
+          "title": "Independientes y emprendedores",
+          "label": "",
+          "figure": "Sin inversión mínima",
+          "text": "Para quienes desean trabajar por cuenta propia o tener un negocio aquí. Los profesionales calificados pueden optar según su especialidad, y los dueños de un negocio físico, como un hotel o restaurante, tienen su propia opción."
+        },
+        {
+          "icon": "engineering",
+          "title": "Trabajadores extranjeros",
+          "label": "",
+          "figure": "",
+          "text": "La normativa costarricense ofrece varias opciones para que las empresas contraten ejecutivos, gerentes, técnicos y consultores extranjeros. Le ayudamos a encontrar la adecuada."
+        }
+      ]
+    },
+    "requirements": {
+      "eyebrow": "Lo que necesitará",
+      "title": "Requisitos generales",
+      "intro": "Sea cual sea la categoría, la mayoría de las solicitudes incluyen lo siguiente. Los puntos marcados con \"Lo hacemos por usted\" los prepara nuestro equipo.",
+      "items": [
+        {
+          "title": "Prueba del requisito principal",
+          "text": "Documentos que demuestren que califica para su categoría, como una carta de pensión para pensionados, certificaciones de la inversión para inversionistas o un certificado de matrimonio costarricense.",
+          "handled": false
+        },
+        {
+          "title": "Certificado de antecedentes",
+          "text": "Emitido por una autoridad nacional de su país: el FBI para ciudadanos estadounidenses, la RCMP para canadienses o ACRO Criminal Records Office para ciudadanos del Reino Unido.",
+          "handled": false
+        },
+        {
+          "title": "Certificado de nacimiento",
+          "text": "Una copia reciente, con no más de seis meses de emitida.",
+          "handled": false
+        },
+        {
+          "title": "Formulario de solicitud",
+          "text": "Lo completa nuestro equipo.",
+          "handled": true
+        },
+        {
+          "title": "Carta de presentación",
+          "text": "Una carta con sus datos personales para la solicitud, preparada por nosotros.",
+          "handled": true
+        },
+        {
+          "title": "Huellas dactilares",
+          "text": "Se toman en una delegación policial. Coordinamos la cita en San José o Liberia, le llevamos desde nuestra oficina y gestionamos los formularios.",
+          "handled": true
+        },
+        {
+          "title": "Copia certificada del pasaporte",
+          "text": "Certificamos la copia de su pasaporte.",
+          "handled": true
+        },
+        {
+          "title": "Registro consular",
+          "text": "Inscripción en el consulado de su país, realizada por nuestro equipo.",
+          "handled": true
+        },
+        {
+          "title": "Fotografías",
+          "text": "Fotografías tamaño pasaporte.",
+          "handled": false
+        },
+        {
+          "title": "Derechos gubernamentales",
+          "text": "$251 al presentar la solicitud y $433 al final del proceso.",
+          "handled": false
+        }
+      ]
+    },
+    "documents": {
+      "title": "Sobre sus documentos",
+      "items": [
+        "Los documentos en otro idioma deben traducirse al español. El costo de la traducción varía según el idioma.",
+        "Los documentos extranjeros deben autenticarse: con apostilla si su país forma parte del Convenio de La Haya, o mediante legalización si no.",
+        "Los certificados de nacimiento, de antecedentes y demás documentos extranjeros deben emitirse dentro de los seis meses previos a la presentación, por lo que el certificado de nacimiento original no será aceptado.",
+        "Necesitará certificados de antecedentes de cada país donde haya residido legalmente en los últimos tres años. El tiempo como turista no cuenta."
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Plazos",
+      "title": "Cuánto tarda",
+      "intro": "Una solicitud de residencia temporal pasa por tres etapas.",
+      "stages": [
+        {
+          "title": "Recopilación de documentos",
+          "duration": "Unas 8 semanas",
+          "text": "Le ayudamos a obtener los documentos que traerá a Costa Rica y preparamos el resto de la solicitud."
+        },
+        {
+          "title": "Análisis y resolución de la DGME",
+          "duration": "Normalmente 9–12 meses",
+          "text": "Presentamos su solicitud ante la Dirección General de Migración y Extranjería (DGME). La ley establece un plazo de 90 días, pero actualmente el trámite tarda bastante más."
+        },
+        {
+          "title": "Inscripción",
+          "duration": "Unas 4 semanas",
+          "text": "Una vez aprobada, le inscribimos en la CCSS (Caja) y obtenemos su DIMEX. Con esto se completa el proceso."
+        }
+      ]
+    },
+    "pending": {
+      "title": "Mientras su solicitud está en trámite",
+      "items": [
+        "Al presentar la solicitud, la DGME emite un comprobante que, junto con su pasaporte, sirve como identificación válida.",
+        "Puede permanecer en Costa Rica mientras su solicitud está en trámite, sin salir cada 90 días para renovar su visa.",
+        "No puede obtener licencia de conducir costarricense hasta tener su DIMEX. Para seguir conduciendo con una licencia extranjera, debe salir del país cada 90 días para renovar su sello de ingreso, una regla de otra institución del gobierno.",
+        "Si viaja durante el período de espera, al reingresar podrían pedirle un boleto de salida, de avión o de bus según por dónde llegue."
+      ]
+    }
   },
   "realEstate": {
-    "titleCR": "Bienes Raíces en Costa Rica",
-    "summary": {
-      "paragraph1": "El equipo de Bienes Raíces y Negocios está formado por profesionales dedicados e internacionales cuya misión principal es proteger la inversión y el sustento de nuestros clientes. Ayudamos a expatriados nuevos y experimentados con muchos aspectos de ser propietarios, incluyendo alquileres, compras de casas, autos y embarcaciones, impuestos, protección de títulos, fideicomisos y desarrollo. ¿Quiere alquilar su casa en Airbnb? Podemos ayudar. ¿Sueña con desarrollar terrenos en viviendas de alta gama o un hotel frente al mar? También podemos ayudar allí.",
-      "paragraph2": "Nuestra División de Negocios se encarga del establecimiento y cumplimiento de corporaciones, impuestos, cumplimiento del empleador con la CCSS, planificación patrimonial, registros de empresas extranjeras en Costa Rica y mucho más.",
-      "paragraph3": "Los sistemas de Costa Rica son conocidos por ser complicados, pero los equipos de Negocios y Bienes Raíces trabajan para brindarle tranquilidad.<br>Nuestro personal trabaja de la mano para asegurarse de que lo que desea hacer con la inversión que realiza esté bien protegido y cumpla con sus necesidades a largo plazo. No dude en contactarnos con una pregunta o inquietud. Siempre estamos aquí para ayudar."
+    "hero": {
+      "eyebrow": "Bienes raíces",
+      "title": "Proteja su inversión en Costa Rica",
+      "intro": "Compre, venda, alquile o desarrolle propiedades con un equipo legal que revisa cada detalle antes de que usted firme.",
+      "imageAlt": "Casa frente al mar en la costa"
+    },
+    "intro": {
+      "title": "Un solo equipo para el lado legal de su propiedad",
+      "paragraphs": [
+        "Nuestro equipo de bienes raíces ayuda a extranjeros, recién llegados o con años en el país, en todo lo relacionado con tener una propiedad en Costa Rica: compras y ventas, protección del título, escrow, alquileres, impuestos y proyectos de desarrollo.",
+        "Trabajamos junto a agentes inmobiliarios, desarrolladores e instituciones financieras de confianza, para que usted tenga un solo contacto para el lado legal y práctico de su transacción."
+      ]
     },
     "services": {
-      "title": "Servicios de Bienes Raíces",
-      "property": {
-        "title": "Compra o Venta de Propiedades",
-        "description": "¿Busca comprar o vender una propiedad? Nuestro equipo de profesionales legales experimentados y dedicados está bien versado en las leyes y regulaciones locales de bienes raíces, garantizando un proceso sin problemas y seguro para nuestros clientes.<br>Lo que nos distingue son nuestras alianzas estratégicas con actores clave en la industria inmobiliaria, incluyendo agentes inmobiliarios de renombre, desarrolladores de propiedades e instituciones financieras. Estas alianzas nos permiten ofrecer un enfoque integral para las transacciones inmobiliarias, brindándole una solución integral para todas sus necesidades legales y logísticas."
-      },
-      "car": {
-        "title": "Compra o Venta de Autos",
-        "description": "¿Busca comprar o vender un automóvil? Navegar por las complejidades de comprar o vender un automóvil en un mercado extranjero requiere un aliado legal de confianza, y ahí es donde intervenimos. Nuestro equipo dedicado de profesionales legales posee un conocimiento profundo de las regulaciones automotrices de Costa Rica, garantizando que cada aspecto de su transacción se maneje con diligencia y cumplimiento."
-      }
+      "eyebrow": "Cómo le ayudamos",
+      "title": "Servicios de bienes raíces",
+      "items": [
+        {
+          "icon": "handshake",
+          "title": "Compra y venta",
+          "text": "Revisión de contratos, escrow y cierre, para que la propiedad que compra sea exactamente la prometida."
+        },
+        {
+          "icon": "titleSearch",
+          "title": "Protección del título",
+          "text": "Revisamos el historial y los registros de la propiedad antes de que usted se comprometa."
+        },
+        {
+          "icon": "key",
+          "title": "Alquileres y Airbnb",
+          "text": "Prepare su propiedad para alquiler de largo o corto plazo, incluso en plataformas como Airbnb."
+        },
+        {
+          "icon": "apartment",
+          "title": "Proyectos de desarrollo",
+          "text": "Asesoría legal para convertir un terreno en viviendas de alta gama o un hotel frente al mar."
+        },
+        {
+          "icon": "receipt",
+          "title": "Impuestos de propiedad",
+          "text": "Manténgase al día con los impuestos que implica tener una propiedad en Costa Rica."
+        },
+        {
+          "icon": "car",
+          "title": "Vehículos y embarcaciones",
+          "text": "Compre o venda un auto o una embarcación con el traspaso hecho conforme a la normativa costarricense."
+        }
+      ]
+    }
+  },
+  "business": {
+    "hero": {
+      "eyebrow": "Negocios y sociedades",
+      "title": "Haga negocios en Costa Rica con confianza",
+      "intro": "Desde la constitución de su empresa hasta el cumplimiento año tras año, ayudamos a emprendedores extranjeros y nacionales a crecer sobre una base legal sólida.",
+      "imageAlt": "Documentos y un bolígrafo sobre un escritorio"
+    },
+    "intro": {
+      "title": "Su empresa, en orden",
+      "paragraphs": [
+        "Nuestro equipo de negocios se encarga del trabajo legal y administrativo de tener una empresa en Costa Rica, desde la constitución y las inscripciones hasta los impuestos y las obligaciones patronales ante la CCSS.",
+        "Le explicamos cada obligación con claridad y llevamos el control de los plazos, para que usted se enfoque en hacer crecer su negocio."
+      ]
+    },
+    "services": {
+      "eyebrow": "Cómo le ayudamos",
+      "title": "Servicios para empresas",
+      "items": [
+        {
+          "icon": "bank",
+          "title": "Constitución de sociedades",
+          "text": "Constituya una sociedad costarricense con la estructura adecuada para sus objetivos."
+        },
+        {
+          "icon": "globe",
+          "title": "Empresas extranjeras",
+          "text": "Inscriba su empresa extranjera para operar legalmente en Costa Rica."
+        },
+        {
+          "icon": "factCheck",
+          "title": "Cumplimiento corporativo y tributario",
+          "text": "Mantenga al día las obligaciones legales y tributarias de su sociedad."
+        },
+        {
+          "icon": "badge",
+          "title": "Inscripción patronal",
+          "text": "Inscríbase como patrono ante la CCSS (Caja) y mantenga sus obligaciones en orden."
+        },
+        {
+          "icon": "family",
+          "title": "Planificación patrimonial",
+          "text": "Planifique cómo se transmitirán sus bienes y sociedades en Costa Rica."
+        },
+        {
+          "icon": "immigration",
+          "title": "Residencia por negocios",
+          "text": "Combine sus planes de negocio con la residencia como inversionista o independiente."
+        }
+      ]
     }
   },
   "insurance": {
-    "titleCR": "Seguros en Costa Rica",
-    "partner": "Afiliados con",
-    "summary": {
-      "paragraph1": "Con más de dos décadas de servicio dedicado en la industria de seguros, nos enorgullece ofrecer cobertura integral y soluciones personalizadas para salvaguardar sus activos valiosos y asegurar su tranquilidad.",
-      "paragraph2": "Nuestra afiliación de larga data con el Instituto Nacional de Seguros (INS) refuerza aún más nuestro compromiso de ofrecer productos de seguros de primera categoría y un servicio al cliente excepcional. Como socio de confianza del INS, nos adherimos a los más altos estándares de profesionalismo, confiabilidad e integridad, garantizando que nuestros clientes reciban nada menos que excelencia en cada interacción.",
-      "paragraph3": "Ya sea que busque protección para su hogar, vehículo, negocio o pertenencias personales, nuestro equipo experto está aquí para adaptar soluciones de seguros que se alineen con sus necesidades y presupuesto únicos. Desde seguros de propiedad y accidentes hasta cobertura de salud y vida, ofrecemos una amplia gama de pólizas diseñadas para mitigar riesgos y proporcionar seguridad financiera para usted y sus seres queridos."
+    "hero": {
+      "eyebrow": "Seguros",
+      "title": "La cobertura adecuada, explicada con claridad",
+      "intro": "Seguros de auto, hogar, salud y vida del Instituto Nacional de Seguros (INS), con la asesoría de quienes conocen las pólizas a fondo.",
+      "imageAlt": "Palmeras junto a un edificio moderno"
     },
-    "services": {
-      "title": "Tipos de Seguros",
-      "car": {
-        "title": "Seguro de Automóvil",
-        "description": "Experimente tranquilidad en la carretera con nuestra cobertura integral de seguro de automóvil. Proteja su vehículo contra accidentes imprevistos, robo y daños, asegurando que pueda conducir con confianza sabiendo que está protegido. Nuestras pólizas personalizadas ofrecen opciones flexibles para satisfacer sus necesidades y presupuesto, respaldadas por un procesamiento de reclamos rápido y un soporte al cliente experto. Ya sea que sea un viajero diario o un conductor ocasional, confíe en nosotros para proporcionar una cobertura confiable que lo mantenga avanzando de manera segura."
-      },
-      "home": {
-        "title": "Seguro de Hogar",
-        "description": "Proteja su activo más valioso con nuestras soluciones de seguro de hogar confiables. Desde proteger su propiedad contra desastres naturales hasta salvaguardar sus pertenencias contra robo y vandalismo, nuestras pólizas integrales ofrecen tranquilidad para los propietarios de viviendas. Con opciones de cobertura personalizables y servicios de reclamos receptivos, aseguramos que su hogar permanezca como un refugio de seguridad y comodidad. Confíe en nosotros para proporcionar la protección que necesita para salvaguardar su inversión y proporcionar seguridad financiera para su familia."
-      },
-      "medical": {
-        "title": "Seguro Médico",
-        "description": "Asegure su bienestar y el de sus seres queridos con nuestros planes de seguro médico integrales. Desde chequeos rutinarios hasta emergencias médicas inesperadas, nuestras pólizas ofrecen cobertura para una amplia gama de necesidades de atención médica. Con acceso a una extensa red de proveedores de atención médica y apoyo personalizado, nos esforzamos por hacer que la atención médica de calidad sea accesible y asequible para todos. Tenga la seguridad de que con nuestra cobertura de seguro médico, puede concentrarse en su salud y recuperación sin preocuparse por la carga financiera de los gastos médicos."
-      },
-      "disputes": {
-        "title": "Disputas de Seguros",
-        "description": "Con años de experiencia navegando por el intrincado panorama legal que rodea las disputas de seguros, nuestros abogados experimentados poseen el conocimiento y las habilidades necesarias para abogar efectivamente en su nombre.<br>Ya sea que esté lidiando con reclamos denegados, disputas de cobertura o problemas con su proveedor de seguros, estamos comprometidos a buscar resultados favorables a través de negociaciones estratégicas, mediación o litigios cuando sea necesario. Nuestro equipo comprende las complejidades de la ley de seguros y trabajará incansablemente para proteger sus derechos y buscar la compensación que merece."
-      }
+    "partner": {
+      "title": "Aliados del Instituto Nacional de Seguros",
+      "text": "Nuestra larga relación con el INS, la aseguradora nacional de Costa Rica, nos permite ofrecerle su gama de pólizas con atención personalizada.",
+      "logoAlt": "Logo del INS"
+    },
+    "intro": {
+      "title": "Una cobertura a su medida",
+      "paragraphs": [
+        "Con más de dos décadas en la industria de seguros, le ayudamos a elegir la cobertura que se ajusta a sus necesidades y presupuesto, para su hogar, vehículo, negocio o pertenencias.",
+        "Le explicamos sus opciones con claridad antes de firmar y le acompañamos cuando necesite presentar un reclamo."
+      ]
+    },
+    "types": {
+      "eyebrow": "Tipos de seguro",
+      "title": "Lo que podemos asegurar",
+      "items": [
+        {
+          "icon": "car",
+          "title": "Seguro de automóvil",
+          "text": "Protección contra accidentes, robo y daños, tanto si maneja a diario como de forma ocasional."
+        },
+        {
+          "icon": "home",
+          "title": "Seguro de hogar",
+          "text": "Proteja su propiedad contra desastres naturales y sus pertenencias contra robo y vandalismo."
+        },
+        {
+          "icon": "health",
+          "title": "Seguro médico",
+          "text": "Planes para chequeos de rutina y emergencias inesperadas, con acceso a una amplia red de proveedores."
+        },
+        {
+          "icon": "life",
+          "title": "Seguro de vida",
+          "text": "Seguridad financiera para quienes dependen de usted."
+        },
+        {
+          "icon": "storefront",
+          "title": "Seguro para empresas",
+          "text": "Proteja los bienes de su empresa y cubra su responsabilidad civil."
+        }
+      ]
+    },
+    "disputes": {
+      "eyebrow": "Disputas de seguros",
+      "title": "¿Le rechazaron un reclamo? Podemos ayudarle.",
+      "text": "Si su reclamo fue rechazado o su aseguradora disputa su cobertura, nuestros abogados le representan mediante negociación, mediación o, cuando es necesario, un proceso judicial, para obtener la indemnización que le corresponde."
     }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Hablemos de sus planes",
+      "intro": "Cuéntenos su situación. Su primera consulta es gratuita.",
+      "imageAlt": "Océano en calma al amanecer"
+    },
+    "details": {
+      "title": "Datos de contacto",
+      "whatsapp": "WhatsApp",
+      "email": "Correo electrónico",
+      "office": "Oficina",
+      "address": "Edificio Monterrico, primer piso, Trejos Montealegre, Escazú, San José",
+      "directions": "Cómo llegar"
+    },
+    "mapTitle": "Mapa con la ubicación de la oficina de Costa Legal en Escazú"
   },
   "contactForm": {
     "title": "Envíenos un mensaje",
     "intro": "Cuéntenos un poco sobre su situación y le responderemos lo antes posible.",
+    "phone": "Teléfono / WhatsApp",
+    "optional": "opcional",
     "sending": "Enviando...",
     "success": "¡Gracias! Su mensaje fue enviado. Le responderemos pronto.",
     "privacy": "Solo utilizaremos sus datos para responder a su consulta.",
@@ -173,7 +514,21 @@
       "captchaUnavailable": "No se pudo cargar la verificación de seguridad. Recargue la página o contáctenos por correo o WhatsApp.",
       "invalidFields": "Revise los campos del formulario e inténtelo de nuevo.",
       "tooManyLinks": "Su mensaje contiene demasiados enlaces. Elimine algunos e inténtelo de nuevo.",
-      "sendFailed": "No se pudo enviar su mensaje. Inténtelo de nuevo o contáctenos por correo o WhatsApp."
+      "sendFailed": "No se pudo enviar su mensaje. Inténtelo de nuevo o contáctenos por correo o WhatsApp.",
+      "invalidPhone": "Ingrese un número de teléfono válido"
     }
+  },
+  "footer": {
+    "tagline": "Servicios legales bilingües en Escazú, Costa Rica: migración, bienes raíces, negocios y seguros.",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "follow": "Síganos",
+    "rights": "Todos los derechos reservados."
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "Página no encontrada",
+    "text": "La página que busca no existe o cambió de dirección.",
+    "back": "Volver al inicio"
   }
 }

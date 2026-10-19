@@ -1,40 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
-import i18n from 'i18next';
-import { initReactI18next, I18nextProvider } from 'react-i18next';
-import { Provider } from 'react-redux';
-import store from './store';
-import { ScrollToTop } from './utils/commonFuncs';
-import './index.css';
-import App from './App';
-import en from './assets/i18n/en.json';
-import es from './assets/i18n/es.json';
+import { StrictMode } from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import '@fontsource-variable/inter/index.css';
+import '@fontsource-variable/lora/index.css';
+import './styles/global.css';
+import './i18n';
+import App from './App.jsx';
 
-i18n.use(initReactI18next).init({
-  interpolation: { escapeValue: false },
-  lng: 'en',
-  fallbackLng: ['en', 'es'],
-  resources: {
-    en: {
-      global: en,
-    },
-    es: {
-      global: es,
-    },
-  },
-});
+// Old links used hash URLs (/#/immigration): move them to the real path before rendering.
+const legacyHash = window.location.hash.startsWith('#/');
+if (legacyHash) {
+  window.history.replaceState(null, '', window.location.hash.slice(1) || '/');
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <HashRouter>
-        <I18nextProvider i18n={i18n}>
-          <ScrollToTop />
-          <App />
-        </I18nextProvider>
-      </HashRouter>
-    </Provider>
-  </React.StrictMode>
+const root = document.getElementById('root')!;
+const app = (
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
 );
+
+// Pre-rendered pages are hydrated; a redirected legacy URL is rendered fresh because its HTML is the home page.
+if (root.hasChildNodes() && !legacyHash) {
+  hydrateRoot(root, app);
+} else {
+  createRoot(root).render(app);
+}

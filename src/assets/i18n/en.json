@@ -1,203 +1,507 @@
 {
-  "common": {
-    "getInTouch": "Get in Touch",
-    "message": "Message",
-    "name": "Name",
-    "readMore": "Read More",
-    "learnMore": "Learn More",
-    "services": "Our Services",
-    "submit": "Submit",
-    "readyMove": "Ready to make a move?",
-    "moreInfo": "Need more information?"
-  },
-  "contact": {
-    "email": "Email",
-    "phone": "Phone",
-    "social": "Social",
-    "title": "Contact",
-    "contactNow": "Contact us now",
-    "hasSentMessage": "has sent you a message through Costa Legal",
-    "template": {
-      "sentMessage": "has sent you a message"
-    }
-  },
-  "home": {
-    "aboutUs": {
-      "description": "At Costa Legal we will deliver personalized legal services, with a team of bilingual lawyers who are dedicated to guiding clients through the complexities of Costa Rican law, including immigration, real estate, business, and commercial matters.",
-      "title": "About Our Firm"
+  "meta": {
+    "home": {
+      "title": "Costa Legal | Immigration, Real Estate & Business Lawyers in Costa Rica",
+      "description": "Bilingual law firm in Escazú, Costa Rica: residency and immigration, real estate, business and INS insurance. Book a free consultation."
     },
     "immigration": {
-      "description": "Costa Legal specializes in immigration law and offers personalized services for individuals and businesses. We help clients with visa applications, work permits, residency applications, and citizenship.",
-      "title": "Immigration"
-    },
-    "insurance": {
-      "description": "We offer insurance services in Costa Rica, providing comprehensive coverage to protect you and your assets. Our team of experienced professionals works with top insurance providers to offer a range of options, including health, property, liability, and more.",
-      "title": "Insurance"
-    },
-    "location": {
-      "title": "Where we are",
-      "floor": "first floor"
+      "title": "Costa Rica Residency & Immigration Lawyers | Costa Legal",
+      "description": "Pensionado, rentista, investor and family residency in Costa Rica. Requirements, timelines and full support from documents to your DIMEX."
     },
     "realEstate": {
-      "description": "Our legal team provides comprehensive real estate legal services to clients looking to buy, sell, or invest in property in Costa Rica. We offer personalized legal guidance and support to ensure a smooth and successful transaction.",
-      "title": "Real Estate"
+      "title": "Real Estate Lawyers in Costa Rica | Costa Legal",
+      "description": "Buy, sell, rent or develop property in Costa Rica safely: title checks, escrow, closings and rentals with a bilingual legal team in Escazú."
     },
-    "welcome": "Your legal guide to a brighter future in Costa Rica and beyond",
-    "welcomeBtn": "Book a free consultation"
+    "business": {
+      "title": "Business & Corporate Lawyers in Costa Rica | Costa Legal",
+      "description": "Company formation, corporate and tax compliance, CCSS employer registration and estate planning in Costa Rica, in English or Spanish."
+    },
+    "insurance": {
+      "title": "INS Insurance in Costa Rica: Car, Home & Health | Costa Legal",
+      "description": "Car, home, health and life insurance through the Instituto Nacional de Seguros (INS), plus legal help when a claim is denied or disputed."
+    },
+    "contact": {
+      "title": "Contact Costa Legal | Free Consultation in Escazú",
+      "description": "Reach our bilingual team by form, WhatsApp or email, or visit our office at Edificio Monterrico, Escazú. Your first consultation is free."
+    },
+    "notFound": {
+      "title": "Page not found | Costa Legal",
+      "description": "The page you're looking for doesn't exist."
+    }
   },
-  "immigration": {
-    "titleCR": "Immigration in Costa Rica",
-    "summary": "We offer the following services to assist you in the process of obtaining residency in Costa Rica. Immigration laws in Costa Rica offer numerous options for people to relocate to the country. There are opportunities for retirees, people on fixed incomes, investors, spouses or parents of a Costa Rican, self-employed persons or entrepreneurs, and employees of a company.",
-    "residencyServices": "Residency Services",
-    "residencyRetired": {
-      "title": "Retired People (Pensionados)",
-      "description": "This option is available to people who are currently retired and receive retirement income of at least $1,000 per month. The income can originate from a pension from the Social Security System or Pension System in your home country. This residency is also available for people who receive income for dissability. Then it is possible to sponsor spouses children."
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "immigration": "Immigration",
+    "realEstate": "Real Estate",
+    "business": "Business",
+    "insurance": "Insurance",
+    "contact": "Contact",
+    "cta": "Free consultation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Cambiar a español",
+    "skip": "Skip to content",
+    "logo": "Costa Legal, home"
+  },
+  "common": {
+    "bookConsultation": "Book a free consultation",
+    "whatsapp": "Chat on WhatsApp",
+    "whatsappMessage": "Hello, I'd like to book a free consultation.",
+    "learnMore": "Learn more",
+    "name": "Name",
+    "message": "Message",
+    "submit": "Send message",
+    "weHandleIt": "We handle it"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Bilingual law firm in Escazú, Costa Rica",
+      "title": "Your legal partner for life in Costa Rica",
+      "subtitle": "Residency, real estate, business and insurance, handled by a bilingual team that explains every step in plain language.",
+      "imageAlt": "Sunset over the Pacific coast of Costa Rica"
     },
-    "residencyFixed": {
-      "title": "People on a Fixed Income (Rentistas)",
-      "description": "Under this option, it is required to demonstrate that you receive at least $2,500 per month. There are multiple ways to demonstrate this income. One option is to deposit an amount equal to two years of income which is $60,000 USD in a bank abroad or in Costa Rica. Another option is to certify your income from abroad or to open a trust."
-    },
-    "residencyInvestors": {
-      "title": "Investors",
-      "description": "Recently, the Costa Rican government lowered the minimum investment amount to $150,000 USD in Costa Rica. The investment can be in a business, or in assets such as real estate."
-    },
-    "residencyMarriage": {
-      "title": "Under Marriage",
-      "description": "The marriage category is available to foreign nationals who marry a Costa Rican. After two years of being married and residing in Costa Rica, it is possible to obtain citizenship."
-    },
-    "residencyParents": {
-      "title": "Parents",
-      "description": "Foreign nationals who have children born in Costa Rica are eligible for residency."
-    },
-    "residencyEntrepeneurs": {
-      "title": "Self-employed People or Entrepreneurs",
-      "description": "This category is available for people who desire to work for themselves or to open their own business in Costa Rica. There is no minimum amount of money required, only to have a business. There are a couple of options for self employed people. One the one hand, people who have a particular skill or area of specialization qualify for a Residency for Skilled Workers, and thus it is required to demonstrate what your skill is. There is also a residency for people who just have a brick and mortar business such as a hotel or restaurant."
-    },
-    "residencyForeign": {
-      "title": "Foreign Workers",
-      "description": "There are options for companies to hire foreign workers. Whether they are executives, managers, technicians or consultants, the Costa Rican regulations allow for multiple options to hire foreign workers."
-    },
-    "requirements": {
-      "title": "General Immigration Requirements",
-      "description": "The following list outlines the general requirements for any application for residency.",
-      "list": {
-        "verification": "<strong>Verification of the main requirement</strong>. Depending on the category you will be applying for, documentation will be required to confirm eligibility under that category. For instance, people applying under the retirement category must produce a letter providing confirmation of the retirement income; people applying under the investment category must provide certifications of the investment regardless of whether the investment is in real estate or in a business; people applying for residency through marriage must produce a marriage certificate from Costa Rica.",
-        "check": "<strong>Background check</strong>. This document should be issued by a national authority. In the case of US nationals, for instance, it should be from the FBI. In the case of Canadian nationals, it should be issued by the Royal Canadian Mounted Police. In the case of UK nationals, it should be issued by the Association of Chief Police Officers.",
-        "birth": "<strong>Birth certificate</strong>. A new copy of your birth certificate is required, not over six months old.",
-        "application": "<strong>Application form</strong>. We complete this for our clients.",
-        "cover": "<strong>Cover letter</strong>. We complete this for our clients as well. It contains certain information about you.",
-        "fingerprints": "<strong>Fingerprints</strong>. Obtained at a police department. We will coordinate with you in order to receive these, assisting in San José or Liberia by driving you from our office to the location concerned and handling the corresponding forms.",
-        "certify": "<strong>Certified passport copy</strong>. We certify your passport copy.",
-        "registration": "<strong>Consular registration</strong>. Registration with your country’s consulate is required, we also complete this for our clients.",
-        "passport": "<strong>Passport-size photographs</strong>.",
-        "fees": "<strong>Government fees</strong>. Initially, it is required to pay $251 USD in application fees. At the end of the process, it is required to pay an additional $433 USD in government fees."
+    "trust": [
+      {
+        "icon": "language",
+        "title": "Bilingual team",
+        "text": "We work with you in English or Spanish."
       },
-      "notes": {
-        "title": "Important Notes About The Documents",
-        "list": {
-          "translated": "All documents in a foreign language must be translated into Spanish. The costs for the translations will vary depending on the original language.",
-          "apostille": "All documents from abroad must be authenticated for its use in Costa Rica. Documents from certain countries require an apostille.",
-          "legislation": "Documents from other countries require a legalization.",
-          "certificate": "The birth certificates and the background checks (and any other documents from abroad) must be issued within six months prior to filing the application. Therefore, the original birth certificate issued when you were born will not be valid for immigration purposes in Costa Rica.",
-          "check": "Background checks must be from the countries where you lived legally in the past three years. Living legally excludes people who were living as tourists, it is only applicable to people who were legally residing in a foreign country."
-        }
+      {
+        "icon": "insurance",
+        "title": "INS partner",
+        "text": "Partner of Costa Rica's Instituto Nacional de Seguros."
+      },
+      {
+        "icon": "place",
+        "title": "Office in Escazú",
+        "text": "Meet us at Edificio Monterrico, Trejos Montealegre."
+      },
+      {
+        "icon": "calendar",
+        "title": "Free first consultation",
+        "text": "Tell us your situation and we'll outline your options."
+      }
+    ],
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Legal services for expats, investors and families",
+      "intro": "One firm for the legal side of your life in Costa Rica, from your residency to your home, your company and your insurance.",
+      "items": {
+        "immigration": "Residency for retirees, rentistas, investors, families and workers, from gathering documents to receiving your DIMEX.",
+        "realEstate": "Buying, selling, renting or developing property, with title checks, escrow and closing handled correctly.",
+        "business": "Company formation, corporate and tax compliance, CCSS employer registration and estate planning.",
+        "insurance": "Car, home, health and life coverage through INS, plus legal help when a claim is denied or disputed."
+      }
+    },
+    "about": {
+      "eyebrow": "About Costa Legal",
+      "title": "Clear legal guidance, in your language",
+      "paragraphs": [
+        "Costa Legal is a bilingual law firm in Escazú that helps foreigners and Costa Ricans navigate Costa Rican law, from residency applications to property purchases, companies and insurance.",
+        "Costa Rica's systems are notoriously complex. We prepare the paperwork, deal with the institutions and keep you informed at every stage, so you can focus on your plans."
+      ],
+      "points": [
+        "Personal attention from start to finish",
+        "Forms and filings prepared for you",
+        "A network of trusted realtors, developers and banks"
+      ],
+      "panel": {
+        "languages": "English & Español",
+        "office": "Escazú, San José",
+        "practice": "Immigration · Real Estate · Business · Insurance"
       }
     },
     "process": {
-      "title": "Processing Time",
-      "description": "The application process for temporary residency has three stages. Namely, document procurement, Government Analysis and Decision, and Registration. Please review below the description of these three stages as well as the corresponding timeline applicable to each stage.",
-      "table": {
-        "titles": {
-          "stage": "Stage",
-          "timeline": "Timeline",
-          "description": "Description"
+      "eyebrow": "How we work",
+      "title": "Three steps, no surprises",
+      "steps": [
+        {
+          "title": "Free consultation",
+          "text": "Tell us about your situation through the form, WhatsApp or in person. We explain your options and what you'll need."
         },
-        "list": {
-          "procurement": {
-            "title": "Document Procurement",
-            "timeline": "8 weeks",
-            "description": "We will dedicate this period of time to make sure that you get the documents you will need to bring to Costa Rica, as well as preparing the rest of the documents required for the application. Generally, it takes about two months to obtain all the required documents."
-          },
-          "anaylsis": {
-            "title": "Analysis & Decision by the DGME",
-            "timeline": "9 months",
-            "description": "Once the required documents have been obtained, we will file the application with the Immigration Department (DGME) By law, the DGME should process the application within 90 days. However, based on recent processing times, the DGME is currently taking about 12 months for processing an application."
-          },
-          "registration": {
-            "title": "Registration",
-            "timeline": "4 weeks",
-            "description": "Once the application has been approved, We will proceed with your mandatory registration with the CCSS for the Social Security system (also known as CAJA). In addition, we will obtain the ID for foreigners (DIMEX aka cédula). This last step completes the process."
-          }
+        {
+          "title": "We prepare everything",
+          "text": "We gather and review your documents, complete the forms and file them with the right institutions on your behalf."
+        },
+        {
+          "title": "We see it through",
+          "text": "We follow up with the authorities and keep you updated until the process is complete."
         }
-      },
-      "notes": {
-        "title": "Important Notes About The Processing Times",
-        "list": {
-          "application": "Once the application is filed, the DGME will issue a Receipt Notice, which demonstrates that there is an application pending. This document in conjunction with your passport will function as a valid ID.",
-          "review": "As noted, the DGME takes about 9 months for reviewing the application. The law allows you to remain in the country while the application is pending. Thus, the applicant is not required to leave the country to renew the 90-day visa.",
-          "driver": "A Costa Rican driver’s license cannot be obtained until your residency is fully approved and your DIMEX is on hand. Applicants who want to use a foreign driver’s license during the waiting period are required to leave the country every three months to obtain a renewed 90-day visa stamp in their passport. This seems to conflict with the note above but it is the result of different government departments having different rules.",
-          "leave": "If you leave the country during the application waiting period,  you may be required to produce a return ticket when trying to reenter the country at a border or airport. Whether a bus ticket or a plane ticket is required will depend on whether you are arriving at an airport or through a border crossing."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How long does the residency process take?",
+          "a": "There are three stages: about 8 weeks to gather documents, typically 9 to 12 months for the immigration department (DGME) to review your application, and about 4 weeks for your CCSS registration and DIMEX card. Times depend on the government's workload."
+        },
+        {
+          "q": "Can I stay in Costa Rica while my application is pending?",
+          "a": "Yes. Once your application is filed, the DGME issues a receipt that, together with your passport, works as valid ID, and the law allows you to remain in the country while the application is pending."
+        },
+        {
+          "q": "Do my documents need to be translated?",
+          "a": "Yes. Documents in another language must be translated into Spanish, and foreign documents must be apostilled or legalized. Birth certificates and background checks must be issued within six months before filing."
+        },
+        {
+          "q": "Can we start while I'm still abroad?",
+          "a": "Yes. The first stage is gathering the documents you'll bring to Costa Rica, and we guide you through it wherever you are."
+        },
+        {
+          "q": "Do you work in English?",
+          "a": "Yes. Our team works in English and Spanish, and we explain every document and step in the language you prefer."
         }
-      }
+      ]
     }
   },
-  "links": {
-    "contactUs": "Contact Us",
-    "home": "Home",
-    "immigration": "Immigration",
-    "insurance": "Insurance",
-    "realEstate": "Real Estate"
+  "cta": {
+    "title": "Ready to make a move?",
+    "text": "Book a free consultation and we'll walk you through your options."
+  },
+  "immigration": {
+    "hero": {
+      "eyebrow": "Immigration & residency",
+      "title": "Make Costa Rica your home, legally",
+      "intro": "Costa Rica offers residency options for retirees, people with a stable income, investors, families and workers. We help you choose the right category and handle the process from start to finish.",
+      "imageAlt": "Passport and travel documents on a desk"
+    },
+    "categories": {
+      "eyebrow": "Residency categories",
+      "title": "Find the right path",
+      "intro": "Each category has its own requirements. In your free consultation we confirm which one fits you.",
+      "items": [
+        {
+          "icon": "elderly",
+          "title": "Retirees",
+          "label": "Pensionado",
+          "figure": "Pension of at least $1,000 per month",
+          "text": "For people receiving retirement income from their home country's social security or pension system. Disability income also qualifies, and your spouse and children can be included."
+        },
+        {
+          "icon": "paid",
+          "title": "Fixed income",
+          "label": "Rentista",
+          "figure": "At least $2,500 per month",
+          "text": "Show a stable income, either by depositing $60,000 (two years of income) in a bank in Costa Rica or abroad, by certifying your income from abroad, or through a trust."
+        },
+        {
+          "icon": "trending",
+          "title": "Investors",
+          "label": "Inversionista",
+          "figure": "Investment of at least $150,000",
+          "text": "Invest in a Costa Rican business or in assets such as real estate."
+        },
+        {
+          "icon": "family",
+          "title": "Marriage to a Costa Rican",
+          "label": "",
+          "figure": "Citizenship after 2 years",
+          "text": "For foreign nationals married to a Costa Rican. After two years of marriage and residence in the country, you may apply for citizenship."
+        },
+        {
+          "icon": "child",
+          "title": "Parents of a Costa Rican",
+          "label": "",
+          "figure": "",
+          "text": "Foreign nationals with children born in Costa Rica are eligible for residency."
+        },
+        {
+          "icon": "storefront",
+          "title": "Self-employed & entrepreneurs",
+          "label": "",
+          "figure": "No minimum investment",
+          "text": "For people who want to work for themselves or run a business here. Skilled professionals can qualify based on their expertise, and owners of a physical business, such as a hotel or restaurant, have their own option."
+        },
+        {
+          "icon": "engineering",
+          "title": "Foreign workers",
+          "label": "",
+          "figure": "",
+          "text": "Costa Rican regulations offer several options for companies to hire foreign executives, managers, technicians and consultants. We help you find the right one."
+        }
+      ]
+    },
+    "requirements": {
+      "eyebrow": "What you'll need",
+      "title": "General requirements",
+      "intro": "Whatever the category, most applications include the following. Items marked \"We handle it\" are prepared by our team.",
+      "items": [
+        {
+          "title": "Proof of eligibility",
+          "text": "Documents showing you qualify for your category, such as a pension letter for retirees, investment certifications for investors, or a Costa Rican marriage certificate.",
+          "handled": false
+        },
+        {
+          "title": "Background check",
+          "text": "Issued by a national authority in your home country: the FBI for US citizens, the RCMP for Canadians, or ACRO Criminal Records Office for UK nationals.",
+          "handled": false
+        },
+        {
+          "title": "Birth certificate",
+          "text": "A recently issued copy, no more than six months old.",
+          "handled": false
+        },
+        {
+          "title": "Application form",
+          "text": "Completed by our team.",
+          "handled": true
+        },
+        {
+          "title": "Cover letter",
+          "text": "A letter with your personal details for the application, prepared by us.",
+          "handled": true
+        },
+        {
+          "title": "Fingerprints",
+          "text": "Taken at a police station. We arrange the appointment in San José or Liberia, take you there from our office and handle the forms.",
+          "handled": true
+        },
+        {
+          "title": "Certified passport copy",
+          "text": "We certify your passport copy.",
+          "handled": true
+        },
+        {
+          "title": "Consular registration",
+          "text": "Registration with your country's consulate, completed by our team.",
+          "handled": true
+        },
+        {
+          "title": "Passport photos",
+          "text": "Passport-size photographs.",
+          "handled": false
+        },
+        {
+          "title": "Government fees",
+          "text": "$251 when you apply and $433 at the end of the process.",
+          "handled": false
+        }
+      ]
+    },
+    "documents": {
+      "title": "About your documents",
+      "items": [
+        "Documents in another language must be translated into Spanish. Translation costs vary by language.",
+        "Foreign documents must be authenticated: apostilled if your country is part of the Hague Apostille Convention, or legalized if it isn't.",
+        "Birth certificates, background checks and other foreign documents must be issued within six months before filing, so the original birth certificate from when you were born won't be accepted.",
+        "You need background checks from every country where you lived legally in the past three years. Time spent as a tourist doesn't count."
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Timeline",
+      "title": "How long it takes",
+      "intro": "A temporary residency application goes through three stages.",
+      "stages": [
+        {
+          "title": "Gathering documents",
+          "duration": "About 8 weeks",
+          "text": "We help you obtain the documents you'll bring to Costa Rica and prepare the rest of the application."
+        },
+        {
+          "title": "DGME review and decision",
+          "duration": "Typically 9–12 months",
+          "text": "We file your application with the Dirección General de Migración y Extranjería (DGME). The law sets a 90-day limit, but processing currently takes much longer."
+        },
+        {
+          "title": "Registration",
+          "duration": "About 4 weeks",
+          "text": "Once you're approved, we register you with the CCSS (Caja) and obtain your DIMEX residency card. This completes the process."
+        }
+      ]
+    },
+    "pending": {
+      "title": "While your application is pending",
+      "items": [
+        "After filing, the DGME issues a receipt that, together with your passport, serves as valid ID.",
+        "You may stay in Costa Rica while your application is pending, without leaving every 90 days to renew your visa.",
+        "You can't get a Costa Rican driver's license until your DIMEX is issued. To keep driving on a foreign license, you must leave the country every 90 days to renew your entry stamp, a rule set by a different government department.",
+        "If you travel during the waiting period, you may be asked for a return ticket when you re-enter, by plane or by bus depending on how you arrive."
+      ]
+    }
   },
   "realEstate": {
-    "titleCR": "Real Estate in Costa Rica",
-    "summary": {
-      "paragraph1": "The Real Estate and Business team is made up of dedicated, international professionals whose main mission is to protect our clients’ investment and livelihood. We help new and seasoned expats with many aspects of owning property including rentals, home, car and boat purchases, taxes, title protection, escrow and development. Want to rent your home as an AirBnb? We can help. Dream of developing land into high end homes or a beachfront hotel? We can help there, too.",
-      "paragraph2": "Our Business Division handles the establishment and compliance of corporations, taxes, employer compliance with CAJA, estate planning, registrations of foreign businesses in Costa Rica and so much more.",
-      "paragraph3": "Costa Rica’s systems are notoriously complicated, but the Business and Real Estate teams work to give you peace of mind.<br>Our staff works hand in hand to ensure that what you are looking to do with the investment you make is well protected and meets your long-term needs. Feel free to contact us with a question or concern. We are always here to help."
+    "hero": {
+      "eyebrow": "Real estate",
+      "title": "Protect your investment in Costa Rica",
+      "intro": "Buy, sell, rent or develop property with a legal team that checks every detail before you sign.",
+      "imageAlt": "Coastal home overlooking the ocean"
+    },
+    "intro": {
+      "title": "One team for the legal side of your property",
+      "paragraphs": [
+        "Our real estate team helps new and long-time expats with every side of owning property in Costa Rica: purchases and sales, title protection, escrow, rentals, taxes and development projects.",
+        "We work alongside trusted realtors, developers and financial institutions, so you have one point of contact for the legal and practical side of your transaction."
+      ]
     },
     "services": {
-      "title": "Real Estate Services",
-      "property": {
-        "title": "Buying or Selling a Property",
-        "description": "Looking to buy or sell a property? Our team of experienced and dedicated legal professionals is well-versed in the local real estate laws and regulations, ensuring a seamless and secure process for our clients.<br>What sets us apart is our strategic alliances with key players in the real estate industry, including reputable realtors, property developers, and financial institutions. These alliances enable us to offer a holistic approach to real estate transactions, providing you with a one-stop solution for all your legal and logistical needs."
-      },
-      "car": {
-        "title": "Buying or Selling a Car",
-        "description": "Looking to buy or sell a car? Navigating the complexities of buying or selling a car in a foreign market requires a trusted legal ally, and that's where we come in. Our dedicated team of legal professionals possesses in-depth knowledge of Costa Rican automotive regulations, ensuring that every aspect of your transaction is handled with diligence and compliance."
-      }
+      "eyebrow": "How we help",
+      "title": "Real estate services",
+      "items": [
+        {
+          "icon": "handshake",
+          "title": "Buying & selling",
+          "text": "Contract review, escrow and closing, so the property you buy is exactly what you were promised."
+        },
+        {
+          "icon": "titleSearch",
+          "title": "Title protection",
+          "text": "We review the property's registry records and history before you commit."
+        },
+        {
+          "icon": "key",
+          "title": "Rentals & Airbnb",
+          "text": "Set up your property for long-term or short-term rental, including platforms like Airbnb."
+        },
+        {
+          "icon": "apartment",
+          "title": "Development projects",
+          "text": "Legal support for turning land into high-end homes or a beachfront hotel."
+        },
+        {
+          "icon": "receipt",
+          "title": "Property taxes",
+          "text": "Stay current with the taxes that come with owning property in Costa Rica."
+        },
+        {
+          "icon": "car",
+          "title": "Vehicles & boats",
+          "text": "Buy or sell a car or boat with the transfer handled under Costa Rican regulations."
+        }
+      ]
+    }
+  },
+  "business": {
+    "hero": {
+      "eyebrow": "Business & corporate",
+      "title": "Do business in Costa Rica with confidence",
+      "intro": "From setting up your company to staying compliant year after year, we help foreign and local entrepreneurs build on solid legal ground.",
+      "imageAlt": "Documents and a pen on a desk"
+    },
+    "intro": {
+      "title": "Your company, in good order",
+      "paragraphs": [
+        "Our business team handles the legal and administrative work of running a company in Costa Rica, from incorporation and registrations to taxes and employer obligations with the CCSS.",
+        "We explain each obligation in plain language and keep track of deadlines, so you can focus on growing your business."
+      ]
+    },
+    "services": {
+      "eyebrow": "How we help",
+      "title": "Business services",
+      "items": [
+        {
+          "icon": "bank",
+          "title": "Company formation",
+          "text": "Incorporate a Costa Rican company with the right structure for your goals."
+        },
+        {
+          "icon": "globe",
+          "title": "Foreign companies",
+          "text": "Register a foreign business so it can operate legally in Costa Rica."
+        },
+        {
+          "icon": "factCheck",
+          "title": "Corporate & tax compliance",
+          "text": "Keep your company's filings and tax obligations up to date."
+        },
+        {
+          "icon": "badge",
+          "title": "Employer registration",
+          "text": "Register as an employer with the CCSS (Caja) and keep your obligations in order."
+        },
+        {
+          "icon": "family",
+          "title": "Estate planning",
+          "text": "Plan how your assets and companies in Costa Rica will be passed on."
+        },
+        {
+          "icon": "immigration",
+          "title": "Residency through business",
+          "text": "Combine your business plans with investor or self-employed residency."
+        }
+      ]
     }
   },
   "insurance": {
-    "titleCR": "Insurance in Costa Rica",
-    "partner": "Partnered with",
-    "summary": {
-      "paragraph1": "With over two decades of dedicated service in the insurance industry, we take immense pride in offering comprehensive coverage and personalized solutions to safeguard your valuable assets and secure your peace of mind.",
-      "paragraph2": "Our longstanding affiliation with the Instituto Nacional de Seguros (INS) further solidifies our commitment to delivering top-notch insurance products and exceptional customer service. As a trusted partner of INS, we adhere to the highest standards of professionalism, reliability, and integrity, ensuring that our clients receive nothing short of excellence in every interaction.",
-      "paragraph3": "Whether you're seeking protection for your home, vehicle, business, or personal belongings, our expert team is here to tailor insurance solutions that align with your unique needs and budget. From property and casualty insurance to health and life coverage, we offer a diverse range of policies designed to mitigate risks and provide financial security for you and your loved ones."
+    "hero": {
+      "eyebrow": "Insurance",
+      "title": "The right coverage, explained clearly",
+      "intro": "Car, home, health and life insurance through Costa Rica's Instituto Nacional de Seguros (INS), with advice from people who know the policies inside out.",
+      "imageAlt": "Palm trees beside a modern building"
     },
-    "services": {
-      "title": "Insurance Types",
-      "car": {
-        "title": "Car Insurance",
-        "description": "Experience peace of mind on the road with our comprehensive car insurance coverage. Safeguard your vehicle against unforeseen accidents, theft, and damages, ensuring that you can drive with confidence knowing that you're protected. Our tailored policies offer flexible options to suit your needs and budget, backed by prompt claims processing and expert customer support. Whether you're a daily commuter or an occasional driver, trust us to provide reliable coverage that keeps you moving forward safely."
-      },
-      "home": {
-        "title": "Home Insurance",
-        "description": "Protect your most valuable asset with our reliable home insurance solutions. From protecting your property against natural disasters to safeguarding your belongings from theft and vandalism, our comprehensive policies offer peace of mind for homeowners. With customizable coverage options and responsive claim services, we ensure that your home remains a haven of security and comfort. Trust us to provide the protection you need to safeguard your investment and provide financial security for your family."
-      },
-      "medical": {
-        "title": "Health Insurance",
-        "description": "Ensure your well-being and that of your loved ones with our comprehensive medical insurance plans. From routine check-ups to unexpected medical emergencies, our policies offer coverage for a wide range of healthcare needs. With access to an extensive network of healthcare providers and personalized support, we strive to make quality healthcare accessible and affordable for all. Rest assured that with our medical insurance coverage, you can focus on your health and recovery without worrying about the financial burden of medical expenses."
-      },
-      "disputes": {
-        "title": "Insurance Disputes",
-        "description": "With years of experience navigating the intricate legal landscape surrounding insurance disputes, our seasoned attorneys possess the knowledge and skills necessary to advocate effectively on your behalf.<br>Whether you're dealing with denied claims, coverage disputes, or issues with your insurance provider, we are committed to pursuing favorable outcomes through strategic negotiation, mediation, or litigation when necessary. Our team understands the complexities of insurance law and will work tirelessly to protect your rights and pursue the compensation you deserve."
-      }
+    "partner": {
+      "title": "Partner of the Instituto Nacional de Seguros",
+      "text": "Our long-standing relationship with INS, Costa Rica's national insurer, lets us offer its range of policies with personal service.",
+      "logoAlt": "INS logo"
+    },
+    "intro": {
+      "title": "Coverage that fits your life",
+      "paragraphs": [
+        "With more than two decades in the insurance industry, we help you choose coverage that fits your needs and budget, for your home, vehicle, business or personal belongings.",
+        "We explain your options clearly before you sign and stay with you when you need to make a claim."
+      ]
+    },
+    "types": {
+      "eyebrow": "Insurance types",
+      "title": "What we can cover",
+      "items": [
+        {
+          "icon": "car",
+          "title": "Car insurance",
+          "text": "Protection against accidents, theft and damage, for daily commuters and occasional drivers alike."
+        },
+        {
+          "icon": "home",
+          "title": "Home insurance",
+          "text": "Cover your property against natural disasters and your belongings against theft and vandalism."
+        },
+        {
+          "icon": "health",
+          "title": "Health insurance",
+          "text": "Plans for routine check-ups and unexpected emergencies, with access to a wide network of providers."
+        },
+        {
+          "icon": "life",
+          "title": "Life insurance",
+          "text": "Financial security for the people who depend on you."
+        },
+        {
+          "icon": "storefront",
+          "title": "Business insurance",
+          "text": "Protect your company's property and cover its liability."
+        }
+      ]
+    },
+    "disputes": {
+      "eyebrow": "Insurance disputes",
+      "title": "Claim denied? We can help.",
+      "text": "If your claim has been denied or your insurer disputes your coverage, our attorneys represent you through negotiation, mediation or, when necessary, litigation, to pursue the compensation you're entitled to."
     }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's talk about your plans",
+      "intro": "Tell us about your situation. Your first consultation is free.",
+      "imageAlt": "Calm ocean at dawn"
+    },
+    "details": {
+      "title": "Contact details",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "office": "Office",
+      "address": "Edificio Monterrico, first floor, Trejos Montealegre, Escazú, San José",
+      "directions": "Get directions"
+    },
+    "mapTitle": "Map showing the Costa Legal office in Escazú"
   },
   "contactForm": {
     "title": "Send us a message",
     "intro": "Tell us a bit about your situation and we'll get back to you as soon as possible.",
+    "phone": "Phone / WhatsApp",
+    "optional": "optional",
     "sending": "Sending...",
     "success": "Thank you! Your message has been sent. We'll get back to you soon.",
     "privacy": "We'll only use your details to respond to your inquiry.",
@@ -210,7 +514,21 @@
       "captchaUnavailable": "The security check couldn't load. Please refresh the page or contact us by email or WhatsApp.",
       "invalidFields": "Please check the form fields and try again.",
       "tooManyLinks": "Your message contains too many links. Please remove some and try again.",
-      "sendFailed": "Your message couldn't be sent. Please try again or contact us by email or WhatsApp."
+      "sendFailed": "Your message couldn't be sent. Please try again or contact us by email or WhatsApp.",
+      "invalidPhone": "Please enter a valid phone number"
     }
+  },
+  "footer": {
+    "tagline": "Bilingual legal services in Escazú, Costa Rica: immigration, real estate, business and insurance.",
+    "services": "Services",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has moved.",
+    "back": "Back to home"
   }
 }

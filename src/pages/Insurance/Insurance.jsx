@@ -1,51 +1,61 @@
-import React from 'react';
-import './Insurance.css';
-import insuranceBackground from '../../assets/images/insurance.jpg';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import photos from '../../assets/photos';
 import insLogo from '../../assets/logos/ins_white.png';
-import data from "../../assets/data/insurance";
-import Banner from '../../components/Banner/Banner';
-import { Typography, Button  } from '@mui/material';
-import { useTranslation, Trans } from 'react-i18next';
-import { useNavigate } from "react-router-dom";
+import Icon from '../../components/Icon/Icon';
+import { ConsultationButtons, CtaBand, FeatureGrid, IntroColumns, PageHero, SectionHeading } from '../../components/Sections/Sections';
 
 const Insurance = () => {
-  const { t } = useTranslation("global");
-  const navigate = useNavigate();
+  const { t } = useTranslation('global');
+  const list = (key) => t(key, { returnObjects: true });
 
   return (
     <>
-    <Banner bannerImage={insuranceBackground} title={t("home.insurance.title")} />
-    <div className='insurance-partner-container'>
-      <Typography variant='h2' sx={{ color: '#FFFFFF'}}>{t("insurance.partner")}</Typography>
-      <img src={insLogo} alt="INS" />
-    </div>
-    <div className='insurance'>
-      <div className='insurance-summary'>
-        <Typography variant='h2'>{t("insurance.titleCR")}</Typography>
-        <span className='article-divider'></span>
-        <Typography variant='body2' className='insurance-paragraph'>{t("insurance.summary.paragraph1")}</Typography>
-        <Typography variant='body2' className='insurance-paragraph'>{t("insurance.summary.paragraph2")}</Typography>
-        <Typography variant='body2' className='insurance-paragraph'>{t("insurance.summary.paragraph3")}</Typography>
-      </div>
-      <div className='insurance-services'>
-        {data.map((item, idx) => (
-          <div className='insurance-service' key={idx}>            
-            <Typography variant='h2'>{t(item.title)}</Typography>
-            <span className='article-divider'></span>
-            <div className='insurance-service-content'>
-              <Typography variant='body2'><Trans i18nKey={item.desc} components={{ space: <span />}}>{t(item.desc)}</Trans></Typography>
-              <img src={item.image} width={550} alt="Content"/>
+      <PageHero photo={photos.insurance} eyebrow={t('insurance.hero.eyebrow')} title={t('insurance.hero.title')}
+        intro={t('insurance.hero.intro')} imageAlt={t('insurance.hero.imageAlt')}>
+        <ConsultationButtons />
+      </PageHero>
+
+      <section className="partner-band">
+        <div className="container partner-band__inner">
+          <img src={insLogo} alt={t('insurance.partner.logoAlt')} width="160" height="30" loading="lazy" />
+          <div>
+            <h2 className="partner-band__title">{t('insurance.partner.title')}</h2>
+            <p>{t('insurance.partner.text')}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <IntroColumns title={t('insurance.intro.title')} paragraphs={list('insurance.intro.paragraphs')} />
+        </div>
+      </section>
+
+      <section className="section section--ivory">
+        <div className="container">
+          <SectionHeading eyebrow={t('insurance.types.eyebrow')} title={t('insurance.types.title')} />
+          <FeatureGrid items={list('insurance.types.items')} />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="card highlight-card">
+            <span className="icon-badge icon-badge--lg"><Icon name="gavel" size={32} /></span>
+            <div>
+              <p className="eyebrow">{t('insurance.disputes.eyebrow')}</p>
+              <h2 className="highlight-card__title">{t('insurance.disputes.title')}</h2>
+              <p>{t('insurance.disputes.text')}</p>
+              <Link to="/contact" className="btn btn--navy">{t('common.bookConsultation')}</Link>
             </div>
           </div>
-        ))}
-      </div>
-      <div className='insurance-contact'>
-        <Typography variant='h2' sx={{ paddingBottom: '10px'}}>{t("common.moreInfo")}</Typography>
-        <Button onClick={() => navigate('/contact')}>{t("contact.contactNow")}</Button>
-      </div>
-    </div>
+        </div>
+      </section>
+
+      <CtaBand />
     </>
-  )
-}
+  );
+};
 
 export default Insurance;

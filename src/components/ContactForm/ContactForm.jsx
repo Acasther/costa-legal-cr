@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Alert, Button, CircularProgress, Stack, TextField, Typography } from '@mui/material';
+import { useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import './ContactForm.css';
+import Icon from '../Icon/Icon';
 
 const TURNSTILE_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY;
-const LIMITS = { name: 100, email: 254, message: 5000 };
+const LIMITS = { name: 100, email: 254, phone: 30, message: 5000 };
 const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[^\s@<>()[\]\\,;:"]{2,}$/;
-const EMPTY_FORM = { name: '', email: '', message: '', website: '' };
+const PHONE_RE = /^\+?[\d\s().-]+$/;
+const EMPTY_FORM = { name: '', email: '', phone: '', message: '', website: '' };
 
 let turnstileScript;
 const loadTurnstile = () => {
@@ -28,8 +28,24 @@ const loadTurnstile = () => {
   return turnstileScript;
 };
 
+const Field = ({ id, label, error, multiline, optionalLabel, ...props }) => {
+  const Control = multiline ? 'textarea' : 'input';
+  return (
+    <div className={`field${error ? ' field--error' : ''}`}>
+      <label htmlFor={id} className="field__label">
+        {label}
+        {optionalLabel ? <span className="field__optional"> ({optionalLabel})</span> : <span aria-hidden="true"> *</span>}
+      </label>
+      <Control id={id} className="field__control" aria-invalid={Boolean(error)} aria-describedby={error ? `${id}-error` : undefined}
+        required={!optionalLabel} {...props} />
+      {error && <p id={`${id}-error`} className="field__error">{error}</p>}
+    </div>
+  );
+};
+
 const ContactForm = () => {
-  const { t, i18n } = useTranslation("global");
+  const { t, i18n } = useTranslation('global');
+  const idPrefix = useId();
   const [form, setForm] = useState(EMPTY_FORM);
   const [errors, setErrors] = useState({});
   const [token, setToken] = useState('');
@@ -37,7 +53,11 @@ const ContactForm = () => {
   const [errorKey, setErrorKey] = useState('');
   const widgetRef = useRef(null);
   const widgetId = useRef(null);
-  const startedAt = useRef(Date.now());
+  const startedAt = useRef(0);
+
+  useEffect(() => {
+    startedAt.current = Date.now();
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -78,11 +98,13 @@ const ContactForm = () => {
     const next = {};
     const name = form.name.trim();
     const email = form.email.trim();
+    const phone = form.phone.trim();
     const message = form.message.trim();
     if (!name) next.name = 'required';
     else if (name.length > LIMITS.name) next.name = 'tooLong';
     if (!email) next.email = 'required';
     else if (email.length > LIMITS.email || !EMAIL_RE.test(email)) next.email = 'invalidEmail';
+    if (phone && (phone.length > LIMITS.phone || !PHONE_RE.test(phone) || phone.replace(/\D/g, '').length < 7)) next.phone = 'invalidPhone';
     if (!message) next.message = 'required';
     else if (message.length > LIMITS.message) next.message = 'tooLong';
     setErrors(next);
@@ -132,44 +154,42 @@ const ContactForm = () => {
     }
   };
 
-  const fieldError = (field) => (errors[field] ? t(`contactForm.errors.${errors[field]}`) : ' ');
+  const fieldError = (field) => (errors[field] ? t(`contactForm.errors.${errors[field]}`) : '');
   const sending = status === 'sending';
 
   return (
-    <form className="contact-form-card" onSubmit={handleSubmit} noValidate>
-      <Typography variant="h2">{t("contactForm.title")}</Typography>
-      <span className="article-divider"></span>
-      <Typography variant="body2" className="contact-form-intro">{t("contactForm.intro")}</Typography>
+    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+      <h2 className="contact-form__title">{t('contactForm.title')}</h2>
+      <p className="contact-form__intro">{t('contactForm.intro')}</p>
 
-      <Stack spacing={1}>
-        <TextField label={t("common.name")} name="name" autoComplete="name" value={form.name} onChange={handleChange('name')}
-          error={Boolean(errors.name)} helperText={fieldError('name')} required fullWidth
-          slotProps={{ htmlInput: { maxLength: LIMITS.name } }} />
-        <TextField label={t("contact.email")} name="email" type="email" autoComplete="email" value={form.email} onChange={handleChange('email')}
-          error={Boolean(errors.email)} helperText={fieldError('email')} required fullWidth
-          slotProps={{ htmlInput: { maxLength: LIMITS.email, inputMode: 'email' } }} />
-        <TextField label={t("common.message")} name="message" value={form.message} onChange={handleChange('message')}
-          error={Boolean(errors.message)} helperText={fieldError('message')} required fullWidth multiline minRows={5}
-          slotProps={{ htmlInput: { maxLength: LIMITS.message } }} />
+      <Field id={`${idPrefix}-name`} label={t('common.name')} name="name" autoComplete="name" maxLength={LIMITS.name}
+        value={form.name} onChange={handleChange('name')} error={fieldError('name')} />
+      <Field id={`${idPrefix}-email`} label={t('contact.details.email')} name="email" type="email" inputMode="email" autoComplete="email"
+        maxLength={LIMITS.email} value={form.email} onChange={handleChange('email')} error={fieldError('email')} />
+      <Field id={`${idPrefix}-phone`} label={t('contactForm.phone')} optionalLabel={t('contactForm.optional')} name="phone" type="tel"
+        inputMode="tel" autoComplete="tel" maxLength={LIMITS.phone} value={form.phone} onChange={handleChange('phone')} error={fieldError('phone')} />
+      <Field id={`${idPrefix}-message`} label={t('common.message')} name="message" multiline rows={5} maxLength={LIMITS.message}
+        value={form.message} onChange={handleChange('message')} error={fieldError('message')} />
 
-        {/* Honeypot: hidden from people, often filled in by bots. */}
-        <div className="contact-form-hp" aria-hidden="true">
-          <label htmlFor="contact-website">Website</label>
-          <input id="contact-website" name="website" type="text" tabIndex={-1} autoComplete="off" value={form.website} onChange={handleChange('website')} />
-        </div>
+      {/* Honeypot: hidden from people, often filled in by bots. */}
+      <div className="contact-form__hp" aria-hidden="true">
+        <label htmlFor={`${idPrefix}-website`}>Website</label>
+        <input id={`${idPrefix}-website`} name="website" type="text" tabIndex={-1} autoComplete="off"
+          value={form.website} onChange={handleChange('website')} />
+      </div>
 
-        <div ref={widgetRef} className="contact-form-captcha"></div>
+      <div ref={widgetRef} className="contact-form__captcha"></div>
 
-        {status === 'sent' && <Alert severity="success">{t("contactForm.success")}</Alert>}
-        {errorKey && <Alert severity="error">{t(`contactForm.errors.${errorKey}`)}</Alert>}
+      <div aria-live="polite">
+        {status === 'sent' && <p className="alert alert--success"><Icon name="checkCircle" size={20} /> {t('contactForm.success')}</p>}
+        {errorKey && <p className="alert alert--error">{t(`contactForm.errors.${errorKey}`)}</p>}
+      </div>
 
-        <div className="submit-btn">
-          <Button type="submit" disabled={sending} fullWidth startIcon={sending ? <CircularProgress size={20} color="inherit" /> : null}>
-            {sending ? t("contactForm.sending") : t("common.submit")}
-          </Button>
-        </div>
-        <Typography variant="caption" className="contact-form-privacy">{t("contactForm.privacy")}</Typography>
-      </Stack>
+      <button type="submit" className="btn btn--navy btn--block" disabled={sending}>
+        {sending && <span className="spinner" aria-hidden="true"></span>}
+        {sending ? t('contactForm.sending') : t('common.submit')}
+      </button>
+      <p className="contact-form__privacy">{t('contactForm.privacy')}</p>
     </form>
   );
 };
