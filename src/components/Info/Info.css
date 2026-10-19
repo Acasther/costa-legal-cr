@@ -11,6 +11,14 @@
   text-align: left;
 }
 
+.location-map {
+  padding-top: 40px;
+}
+
+.location-map > .MuiTypography-h3 {
+  padding-bottom: 15px;
+}
+
 .frame-wrapper {
   position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -29,22 +37,16 @@
 @media screen and (max-width: 1024px) {
   .info-container {
     width: 95%;
-    padding: 50px 0px 200px;
-  }
-  .info-container .MuiTextField-root {
-    width: 100%;
-  }
-  .info-grid > .MuiGrid2-root {
-    width: 100%;
-  }
-  .location-map {
-    padding-top: 50px;
+    padding: 50px 0px 80px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .info-container {
     width: 93% !important;
-    padding: 50px 0px 200px;
+    padding: 30px 0px 60px;
   }
+}
+#contact-form {
+  scroll-margin-top: 90px;
 }

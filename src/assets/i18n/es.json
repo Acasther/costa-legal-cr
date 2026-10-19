@@ -157,5 +157,23 @@
         "description": "Con años de experiencia navegando por el intrincado panorama legal que rodea las disputas de seguros, nuestros abogados experimentados poseen el conocimiento y las habilidades necesarias para abogar efectivamente en su nombre.<br>Ya sea que esté lidiando con reclamos denegados, disputas de cobertura o problemas con su proveedor de seguros, estamos comprometidos a buscar resultados favorables a través de negociaciones estratégicas, mediación o litigios cuando sea necesario. Nuestro equipo comprende las complejidades de la ley de seguros y trabajará incansablemente para proteger sus derechos y buscar la compensación que merece."
       }
     }
+  },
+  "contactForm": {
+    "title": "Envíenos un mensaje",
+    "intro": "Cuéntenos un poco sobre su situación y le responderemos lo antes posible.",
+    "sending": "Enviando...",
+    "success": "¡Gracias! Su mensaje fue enviado. Le responderemos pronto.",
+    "privacy": "Solo utilizaremos sus datos para responder a su consulta.",
+    "errors": {
+      "required": "Este campo es obligatorio",
+      "tooLong": "Este texto es demasiado largo",
+      "invalidEmail": "Ingrese un correo electrónico válido",
+      "captchaRequired": "Complete la verificación de seguridad.",
+      "captchaFailed": "La verificación de seguridad falló. Inténtelo de nuevo.",
+      "captchaUnavailable": "No se pudo cargar la verificación de seguridad. Recargue la página o contáctenos por correo o WhatsApp.",
+      "invalidFields": "Revise los campos del formulario e inténtelo de nuevo.",
+      "tooManyLinks": "Su mensaje contiene demasiados enlaces. Elimine algunos e inténtelo de nuevo.",
+      "sendFailed": "No se pudo enviar su mensaje. Inténtelo de nuevo o contáctenos por correo o WhatsApp."
+    }
   }
 }
