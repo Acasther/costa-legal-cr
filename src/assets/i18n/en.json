@@ -194,5 +194,23 @@
         "description": "With years of experience navigating the intricate legal landscape surrounding insurance disputes, our seasoned attorneys possess the knowledge and skills necessary to advocate effectively on your behalf.<br>Whether you're dealing with denied claims, coverage disputes, or issues with your insurance provider, we are committed to pursuing favorable outcomes through strategic negotiation, mediation, or litigation when necessary. Our team understands the complexities of insurance law and will work tirelessly to protect your rights and pursue the compensation you deserve."
       }
     }
+  },
+  "contactForm": {
+    "title": "Send us a message",
+    "intro": "Tell us a bit about your situation and we'll get back to you as soon as possible.",
+    "sending": "Sending...",
+    "success": "Thank you! Your message has been sent. We'll get back to you soon.",
+    "privacy": "We'll only use your details to respond to your inquiry.",
+    "errors": {
+      "required": "This field is required",
+      "tooLong": "This text is too long",
+      "invalidEmail": "Please enter a valid email address",
+      "captchaRequired": "Please complete the security check above.",
+      "captchaFailed": "The security check failed. Please try again.",
+      "captchaUnavailable": "The security check couldn't load. Please refresh the page or contact us by email or WhatsApp.",
+      "invalidFields": "Please check the form fields and try again.",
+      "tooManyLinks": "Your message contains too many links. Please remove some and try again.",
+      "sendFailed": "Your message couldn't be sent. Please try again or contact us by email or WhatsApp."
+    }
   }
 }

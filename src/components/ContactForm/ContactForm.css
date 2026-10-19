@@ -1,0 +1,39 @@
+.contact-form-card {
+  text-align: left;
+}
+
+.contact-form-intro {
+  padding-bottom: 20px;
+}
+
+.contact-form-captcha {
+  min-height: 65px;
+}
+
+.contact-form-hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form-card .submit-btn > .MuiButton-root.Mui-disabled {
+  color: #e4e8f5;
+  background: #4b4b4b;
+  border-color: #4b4b4b;
+}
+
+.contact-form-privacy {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Touch screens keep :hover after a tap; keep the button dark there. */
+@media (hover: none) {
+  .contact-form-card .submit-btn .MuiButton-root:hover {
+    background: #171717;
+    color: #ffffff;
+  }
+}

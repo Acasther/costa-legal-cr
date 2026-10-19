@@ -1,19 +1,18 @@
 import './Home.css';
 import homeBackground from '../../assets/images/playa_lagosta.jpg';
 import homeData from '../../assets/data/home';
-import { Button, Typography, Stack, Link } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from "react-router-dom";
-import Grid from '@mui/material/Grid';
-import Email from '@mui/icons-material/Email';
-import WhatsApp from '@mui/icons-material/WhatsApp';
-import Place from '@mui/icons-material/Place';
-import { EMAIL_ADDRESS, OFFICE_LOCATION_LONG, OFFICE_BUILDING, PHONE_NUMBER } from '../../utils/constants';
 import Info from '../../components/Info/Info';
 
 const Home = () => {
   const { t } = useTranslation("global");
   const navigate = useNavigate();
+
+  const scrollToContact = () => {
+    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -21,7 +20,7 @@ const Home = () => {
       <div className='welcome'>
         <Typography variant='h1'>{t("home.welcome")}</Typography>
         <div className='banner-btn'>
-          <Button size='large' sx={{ textTransform: 'none'}} onClick={() => navigate('/contact')}>{t("home.welcomeBtn")}</Button>
+          <Button size='large' sx={{ textTransform: 'none'}} onClick={scrollToContact}>{t("home.welcomeBtn")}</Button>
         </div>
       </div>
     </header>
@@ -54,9 +53,6 @@ const Home = () => {
 
 
     <section className='location'>
-      <Typography variant='h2' sx={{ paddingBottom: 1 }}>{t("home.location.title")}</Typography>
-      <span className='divider' style={{ marginBottom: 55 }}></span>
-
       <Info></Info>
     </section>
     </>

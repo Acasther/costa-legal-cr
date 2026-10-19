@@ -1,0 +1,7 @@
+# Copy to .dev.vars for local testing with `npm run dev:cf`. Never commit .dev.vars.
+# Turnstile test secret that always passes; use 2x0000000000000000000000000000000AA to simulate a failure.
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+CONTACT_TO=info@costalegalcr.com
+EMAIL_FROM=Costa Legal Website <web@costalegalcr.com>
+# Leave RESEND_API_KEY unset to log emails to the terminal instead of sending them.
+DEV_LOG_EMAILS=true
