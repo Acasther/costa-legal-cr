@@ -1,21 +1,18 @@
-import React from 'react';
-import "./Contact.css";
-import Banner from '../../components/Banner/Banner';
-import immigrationBackground from '../../assets/images/immigration.jpg';
 import { useTranslation } from 'react-i18next';
-import Info from '../../components/Info/Info';
+import photos from '../../assets/photos';
+import ContactSection from '../../components/ContactSection/ContactSection';
+import { PageHero } from '../../components/Sections/Sections';
 
 const Contact = () => {
-  const [t, i18n]  = useTranslation("global");
+  const { t } = useTranslation('global');
 
   return (
     <>
-    <Banner bannerImage={immigrationBackground} title={t("contact.title")} />
-    <div className="contact-container">
-      <Info></Info>
-    </div>
+      <PageHero size="compact" photo={photos.contact} eyebrow={t('contact.hero.eyebrow')} title={t('contact.hero.title')}
+        intro={t('contact.hero.intro')} imageAlt={t('contact.hero.imageAlt')} />
+      <ContactSection id="message" />
     </>
-  )
-}
+  );
+};
 
 export default Contact;

@@ -1,46 +1,37 @@
-import React from 'react';
-import './RealEstate.css';
-import realEstateBackground from '../../assets/images/real_estate.jpg';
-import data from "../../assets/data/realEstate";
-import Banner from '../../components/Banner/Banner';
-import { useTranslation, Trans } from 'react-i18next';
-import { Typography, Button  } from '@mui/material';
-import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import photos from '../../assets/photos';
+import { ConsultationButtons, CtaBand, FeatureGrid, IntroColumns, PageHero, SectionHeading } from '../../components/Sections/Sections';
 
-const RealEstate = () => {
-  const { t } = useTranslation("global");
-  const navigate = useNavigate();
+// Shared layout for the Real Estate and Business pages: hero, intro, services grid, call to action.
+export const PracticePage = ({ section }) => {
+  const { t } = useTranslation('global');
+  const list = (key) => t(key, { returnObjects: true });
 
   return (
     <>
-    <Banner bannerImage={realEstateBackground} title={t("home.realEstate.title")} />
-    <div className='real-estate'>
-      <div className='real-estate-summary'>
-        <Typography variant='h2'>{t("realEstate.titleCR")}</Typography>
-        <span className='article-divider'></span>
-        <Typography variant='body2' className='real-estate-paragraph'>{t("realEstate.summary.paragraph1")}</Typography>
-        <Typography variant='body2' className='real-estate-paragraph'>{t("realEstate.summary.paragraph2")}</Typography>
-        <Typography variant='body2' className='real-estate-paragraph'><Trans i18nKey="realEstate.summary.paragraph3">{t("realEstate.summary.paragraph3")}</Trans></Typography>
-      </div>
-      <div className='real-estate-services'>
-        {data.map((item, idx) => (
-          <div className='real-estate-service' key={idx}>            
-            <Typography variant='h2'>{t(item.title)}</Typography>
-            <span className='article-divider'></span>
-            <div className='real-estate-service-content'>
-              <Typography variant='body2'><Trans i18nKey={item.desc}>{t(item.desc)}</Trans></Typography>
-              <img src={item.image} width={650} alt="Content"/>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className='real-estate-contact'>
-        <Typography variant='h2' sx={{ paddingBottom: '10px'}}>{t("common.readyMove")}</Typography>
-        <Button onClick={() => navigate('/contact')}>{t("contact.contactNow")}</Button>
-      </div>
-    </div>
+      <PageHero photo={photos[section]} eyebrow={t(`${section}.hero.eyebrow`)} title={t(`${section}.hero.title`)}
+        intro={t(`${section}.hero.intro`)} imageAlt={t(`${section}.hero.imageAlt`)}>
+        <ConsultationButtons />
+      </PageHero>
+
+      <section className="section">
+        <div className="container">
+          <IntroColumns title={t(`${section}.intro.title`)} paragraphs={list(`${section}.intro.paragraphs`)} />
+        </div>
+      </section>
+
+      <section className="section section--ivory">
+        <div className="container">
+          <SectionHeading eyebrow={t(`${section}.services.eyebrow`)} title={t(`${section}.services.title`)} />
+          <FeatureGrid items={list(`${section}.services.items`)} />
+        </div>
+      </section>
+
+      <CtaBand />
     </>
-  )
-}
+  );
+};
+
+const RealEstate = () => <PracticePage section="realEstate" />;
 
 export default RealEstate;

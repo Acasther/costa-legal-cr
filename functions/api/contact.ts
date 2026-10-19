@@ -17,8 +17,11 @@ interface Context {
 const MAX_BODY_BYTES = 32 * 1024;
 const MIN_FILL_MS = 3000;
 const MAX_LINKS = 3;
-const LIMITS = { name: 100, email: 254, message: 5000 };
+const LIMITS = { name: 100, email: 254, phone: 30, message: 5000 };
 const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[^\s@<>()[\]\\,;:"]{2,}$/;
+const PHONE_RE = /^\+?[\d\s().-]+$/;
+const isValidPhone = (phone: string) =>
+  phone.length <= LIMITS.phone && PHONE_RE.test(phone) && phone.replace(/\D/g, '').length >= 7;
 
 const json = (status: number, body: Record<string, unknown>) =>
   new Response(JSON.stringify(body), {
@@ -37,7 +40,9 @@ const escapeHtml = (value: string) =>
 // Removes control characters (except newlines/tabs in the message) and trims.
 const clean = (value: unknown, multiline = false) => {
   if (typeof value !== 'string') return '';
-  const pattern = multiline ? /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g : /[\u0000-\u001F\u007F]/g;
+  // Matching control characters is the point here: they are stripped from visitor input.
+  // eslint-disable-next-line no-control-regex
+  const pattern =multiline ? /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g : /[\u0000-\u001F\u007F]/g;
   return value.replace(pattern, '').trim();
 };
 
@@ -60,10 +65,16 @@ const verifyTurnstile = async (token: string, secret: string, ip: string | null)
   }
 };
 
-const buildEmail = (name: string, email: string, message: string, lang: string, country: string) => {
+const buildEmail = (name: string, email: string, phone: string, message: string, lang: string, country: string) => {
   const sentAt = new Date().toLocaleString('en-US', { timeZone: 'America/Costa_Rica', dateStyle: 'medium', timeStyle: 'short' });
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
+  // Phone only contains digits, spaces and + ( ) . - after validation, so the digits are safe in URLs.
+  // Local 8-digit Costa Rican numbers typed without a country code get +506.
+  const rawDigits = phone.replace(/\D/g, '');
+  const phoneDigits = !phone.startsWith('+') && rawDigits.length === 8 ? `506${rawDigits}` : rawDigits;
+  const phoneLinks = `<a href="tel:+${phoneDigits}" style="color:#1f2d4f;">${escapeHtml(phone)}</a>`
+    + ` &nbsp;·&nbsp; <a href="https://wa.me/${phoneDigits}" style="color:#1f2d4f;">WhatsApp</a>`;
   const safeMessage = escapeHtml(message).replace(/\r?\n/g, '<br>');
   const language = lang === 'es' ? 'Spanish' : 'English';
 
@@ -89,6 +100,7 @@ const buildEmail = (name: string, email: string, message: string, lang: string, 
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                   ${row('Name', safeName)}
                   ${row('Email', `<a href="mailto:${safeEmail}" style="color:#1f2d4f;">${safeEmail}</a>`)}
+                  ${phone ? row('Phone', phoneLinks) : ''}
                   ${row('Language', language)}
                   ${row('Country', escapeHtml(country))}
                   ${row('Received', sentAt + ' (CR)')}
@@ -109,6 +121,7 @@ const buildEmail = (name: string, email: string, message: string, lang: string, 
     '',
     `Name: ${name}`,
     `Email: ${email}`,
+    ...(phone ? [`Phone: ${phone}`] : []),
     `Language: ${language}`,
     `Country: ${country}`,
     `Received: ${sentAt} (CR)`,
@@ -146,6 +159,7 @@ export const onRequestPost = async ({ request, env }: Context) => {
 
   const name = clean(body.name);
   const email = clean(body.email).toLowerCase();
+  const phone = clean(body.phone);
   const message = clean(body.message, true);
   const lang = body.lang === 'es' ? 'es' : 'en';
   const token = clean(body.token);
@@ -161,6 +175,7 @@ export const onRequestPost = async ({ request, env }: Context) => {
   if (
     !name || name.length > LIMITS.name ||
     !email || email.length > LIMITS.email || !EMAIL_RE.test(email) ||
+    (phone && !isValidPhone(phone)) ||
     !message || message.length > LIMITS.message
   ) {
     return json(400, { error: 'invalid_fields' });
@@ -180,7 +195,7 @@ export const onRequestPost = async ({ request, env }: Context) => {
   }
 
   const country = (request as Request & { cf?: { country?: string } }).cf?.country ?? 'Unknown';
-  const { html, text } = buildEmail(name, email, message, lang, country);
+  const { html, text } = buildEmail(name, email, phone, message, lang, country);
   const subject = `New inquiry from ${name} — costalegalcr.com`;
 
   if (!env.RESEND_API_KEY) {
